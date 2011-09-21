@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="diagrama-de-blocos-cebola.svg"
+   inkscape:export-filename="C:\Users\francisco.teixeira\Desktop\projeto\documentacao\diagrama-de-blocos-cebola.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.36940019"
+     inkscape:cx="753.18597"
+     inkscape:cy="487.77859"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="848"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3961"
+       transform="translate(39.190094,-55.323944)">
+      <path
+         d="m 520,499.50504 c 0,103.35614 -83.78671,187.14285 -187.14285,187.14285 -103.35615,0 -187.14286,-83.78671 -187.14286,-187.14285 0,-103.35615 83.78671,-187.14286 187.14286,-187.14286 C 436.21329,312.36218 520,396.14889 520,499.50504 z"
+         sodipodi:ry="187.14285"
+         sodipodi:rx="187.14285"
+         sodipodi:cy="499.50504"
+         sodipodi:cx="332.85715"
+         id="path2987"
+         style="fill:#f6e1ae;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+         sodipodi:type="arc" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3813"
+         d="m 332.85715,312.38073 0,374.24862"
+         style="fill:none;stroke:#000000;stroke-width:1.01851881px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3813-1"
+         d="m 519.98146,499.50504 -374.24862,0"
+         style="fill:none;stroke:#000000;stroke-width:1.01851881px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         d="m 520,499.50504 c 0,103.35614 -83.78671,187.14285 -187.14285,187.14285 -103.35615,0 -187.14286,-83.78671 -187.14286,-187.14285 0,-103.35615 83.78671,-187.14286 187.14286,-187.14286 C 436.21329,312.36218 520,396.14889 520,499.50504 z"
+         sodipodi:ry="187.14285"
+         sodipodi:rx="187.14285"
+         sodipodi:cy="499.50504"
+         sodipodi:cx="332.85715"
+         id="path2987-1"
+         style="fill:#f9d802;fill-opacity:1;stroke:#000000;stroke-width:1.33596051;stroke-miterlimit:4;stroke-dasharray:none"
+         sodipodi:type="arc"
+         transform="matrix(0.74852515,0,0,0.74852515,83.705196,125.61295)" />
+      <path
+         d="m 520,499.50504 c 0,103.35614 -83.78671,187.14285 -187.14285,187.14285 -103.35615,0 -187.14286,-83.78671 -187.14286,-187.14285 0,-103.35615 83.78671,-187.14286 187.14286,-187.14286 C 436.21329,312.36218 520,396.14889 520,499.50504 z"
+         sodipodi:ry="187.14285"
+         sodipodi:rx="187.14285"
+         sodipodi:cy="499.50504"
+         sodipodi:cx="332.85715"
+         id="path2987-1-3"
+         style="fill:#f2a602;fill-opacity:1;stroke:#000000;stroke-width:1.99385524;stroke-miterlimit:4;stroke-dasharray:none"
+         sodipodi:type="arc"
+         transform="matrix(0.50154092,0,0,0.50154092,165.91566,248.98282)" />
+      <path
+         d="m 520,499.50504 c 0,103.35614 -83.78671,187.14285 -187.14285,187.14285 -103.35615,0 -187.14286,-83.78671 -187.14286,-187.14285 0,-103.35615 83.78671,-187.14286 187.14286,-187.14286 C 436.21329,312.36218 520,396.14889 520,499.50504 z"
+         sodipodi:ry="187.14285"
+         sodipodi:rx="187.14285"
+         sodipodi:cy="499.50504"
+         sodipodi:cx="332.85715"
+         id="path2987-1-3-7"
+         style="fill:#e96830;fill-opacity:1;stroke:#000000;stroke-width:3.92839813;stroke-miterlimit:4;stroke-dasharray:none"
+         sodipodi:type="arc"
+         transform="matrix(0.25455669,0,0,0.25455669,248.12613,372.35269)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3905"
+         y="506.93668"
+         x="307.82297"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+         xml:space="preserve"><tspan
+           style="font-size:20px"
+           y="506.93668"
+           x="307.82297"
+           id="tspan3907"
+           sodipodi:role="line">Mídia</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3909"
+         y="428.33215"
+         x="332.54269"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+         xml:space="preserve"><tspan
+           y="428.33215"
+           x="332.54269"
+           id="tspan3911"
+           sodipodi:role="line">Sistema de</tspan><tspan
+           id="tspan3913"
+           y="445.83215"
+           x="332.54269"
+           sodipodi:role="line">Empréstimo</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3909-5"
+         y="383.91278"
+         x="333.03146"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+         xml:space="preserve"><tspan
+           id="tspan3913-3"
+           y="383.91278"
+           x="333.03146"
+           sodipodi:role="line">Cadastro e Consulta</tspan><tspan
+           id="tspan3941"
+           y="401.41278"
+           x="333.03146"
+           sodipodi:role="line">ao Acervo</tspan></text>
+      <text
+         transform="matrix(0.78688005,-0.61710598,0.61710598,0.78688005,0,0)"
+         sodipodi:linespacing="125%"
+         id="text3943"
+         y="760.19373"
+         x="-101.03098"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+         xml:space="preserve"><tspan
+           style="font-size:14px"
+           y="760.19373"
+           x="-101.03098"
+           id="tspan3945"
+           sodipodi:role="line">Pesquisa ao público</tspan></text>
+      <text
+         transform="matrix(0.72888438,0.68463681,-0.68463681,0.72888438,0,0)"
+         sodipodi:linespacing="125%"
+         id="text3947"
+         y="299.05316"
+         x="530.8822"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+         xml:space="preserve"><tspan
+           style="font-size:14px"
+           y="299.05316"
+           x="530.8822"
+           id="tspan3949"
+           sodipodi:role="line">Código de Barras</tspan></text>
+      <text
+         transform="matrix(0.72008531,0.69388554,-0.69388554,0.72008531,0,0)"
+         sodipodi:linespacing="125%"
+         id="text3951"
+         y="-35.863796"
+         x="588.4978"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+         xml:space="preserve"><tspan
+           style="font-size:12px;text-align:center;text-anchor:middle"
+           y="-35.863796"
+           x="588.4978"
+           id="tspan3953"
+           sodipodi:role="line">Jornais, CDs, DVDs,</tspan><tspan
+           id="tspan3955"
+           style="font-size:12px;text-align:center;text-anchor:middle"
+           y="-20.863796"
+           x="588.4978"
+           sodipodi:role="line">Revista e Livros</tspan></text>
+      <text
+         transform="matrix(0.7472016,-0.66459745,0.66459745,0.7472016,0,0)"
+         sodipodi:linespacing="125%"
+         id="text3957"
+         y="439.55426"
+         x="-147.97762"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+         xml:space="preserve"><tspan
+           style="font-size:14px"
+           y="439.55426"
+           x="-147.97762"
+           id="tspan3959"
+           sodipodi:role="line">Cadastro de Membros</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+       x="371.5946"
+       y="113.0015"
+       id="text3986"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3988"
+         x="371.5946"
+         y="113.0015"
+         style="font-size:18px;text-align:center;text-anchor:middle">Diagrama de Blocos</tspan><tspan
+         sodipodi:role="line"
+         x="371.5946"
+         y="135.5015"
+         id="tspan3990"
+         style="font-size:18px;text-align:center;text-anchor:middle">Tipo Cebola</tspan></text>
+  </g>
+</svg>

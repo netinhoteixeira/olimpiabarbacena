@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Biblioteca Comunitária Olímpia Barbacena" company="Francisco Ernesto Teixeira e Jady Pâmella Barbacena" webLink="http://olimpiabarbacena.appspot.com/" view-date="2011-09-07" view-index="0" gantt-divider-location="354" resource-divider-location="300" version="2.0">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart"/>
+    <view id="resource-table">
+        <field id="0" name="Nome" width="55" order="0"/>
+        <field id="1" name="Função" width="44" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <calendar id="1" name="default">
+                <default-week sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+                <overriden-day-types/>
+                <days/>
+            </calendar>
+        </day-types>
+    </calendars>
+    <tasks color="#8cb6ce">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="82" name="Projeto &quot;Biblioteca Comunitária&quot;" color="#8cb6ce" meeting="false" start="2011-08-05" duration="39" complete="0" priority="1" expand="true">
+            <task id="0" name="Planejamento" color="#8cb6ce" meeting="false" start="2011-08-05" duration="39" complete="0" priority="1" expand="true">
+                <task id="1" name="Definição do Tema" color="#8cb6ce" meeting="false" start="2011-08-05" duration="10" complete="0" priority="2" expand="true"/>
+                <task id="4" name="Questionamentos" color="#8cb6ce" meeting="false" start="2011-09-20" duration="7" complete="0" priority="1" expand="true"/>
+                <task id="3" name="Pesquisa Bibliográfica" color="#8cb6ce" meeting="false" start="2011-09-05" duration="1" complete="0" priority="1" expand="true"/>
+                <task id="2" name="Cronograma" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                <task id="5" name="Fluxo de Telas" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                <task id="6" name="Diagrama de Blocos" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                <task id="7" name="Protótipo" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                <task id="17" name="Modelagem de Dados" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+            </task>
+            <task id="8" name="Elaboração" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true">
+                <task id="9" name="Cadastro de Membro" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true">
+                    <task id="10" name="Adicionar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                    <task id="11" name="Listar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                    <task id="12" name="Pesquisar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                    <task id="13" name="Editar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                    <task id="14" name="Remover" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                    <task id="92" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                </task>
+                <task id="15" name="Cadastro de Livro" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true">
+                    <task id="27" name="Adicionar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="25" name="Listar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="23" name="Pesquisar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="21" name="Editar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="19" name="Remover" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="93" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                </task>
+                <task id="28" name="Cadastro de CD" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true">
+                    <task id="38" name="Adicionar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="36" name="Listar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="34" name="Pesquisar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="32" name="Editar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="30" name="Remover" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="94" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                </task>
+                <task id="39" name="Cadastro de DVD" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true">
+                    <task id="49" name="Adicionar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="47" name="Listar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="45" name="Pesquisar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="43" name="Editar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="41" name="Remover" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="95" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                </task>
+                <task id="52" name="Cadastro de Jornal" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true">
+                    <task id="62" name="Adicionar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="60" name="Listar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="58" name="Pesquisar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="56" name="Editar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="54" name="Remover" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="96" name="Teste da Fucionalidade" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                </task>
+                <task id="64" name="Cadastro de Revista" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true">
+                    <task id="74" name="Adicionar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="72" name="Listar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="70" name="Pesquisar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="68" name="Editar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="66" name="Remover" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false"/>
+                    <task id="97" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                </task>
+                <task id="75" name="Reserva" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true">
+                    <task id="76" name="Reservar Mídia" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                    <task id="77" name="Cancelar Reserva" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                    <task id="78" name="Tornar reserva em empréstimo" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                    <task id="98" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                </task>
+                <task id="79" name="Empréstimo" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true">
+                    <task id="80" name="Efetuar Empréstimo" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                    <task id="81" name="Baixa de Empréstimo" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                    <task id="99" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                </task>
+            </task>
+            <task id="100" name="Teste do Projeto" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+            <task id="84" name="Homologação" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="false">
+                <task id="86" name="Ajustes" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+            </task>
+            <task id="85" name="Entrega Solução Final" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true">
+                <task id="87" name="Homologação Final" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+            </task>
+            <task id="88" name="Encerramento" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true">
+                <task id="89" name="Implantação Solução Final" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                <task id="90" name="Pesquisa de satisfação do cliente" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                <task id="91" name="Acompanhamento da Operação" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+            </task>
+            <task id="83" name="Final de Projeto" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Francisco Ernesto Teixeira" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="Jady Pâmella Barbacena" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations/>
+    <vacations/>
+    <taskdisplaycolumns>
+        <displaycolumn property-id="tpd3" order="0" width="136"/>
+        <displaycolumn property-id="tpd4" order="1" width="45"/>
+        <displaycolumn property-id="tpd5" order="2" width="44"/>
+    </taskdisplaycolumns>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
