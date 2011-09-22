@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel width="686px" height="318px">
+		<g:AbsolutePanel height="280px" width="420px">
+			<g:at left="26" top="160">
+				<g:TextBox width="355px" height="16px" ui:field="textboxDevolucao"/>
+			</g:at>
+			<g:at left="25" top="138">
+				<g:Label text="Devolução"/>
+			</g:at>
+			<g:at left="25" top="68">
+				<g:Label text="Emprestar para"/>
+			</g:at>
+			<g:at left="291" top="218">
+				<g:Button width="100px" height="32px" ui:field="buttonFechar">Fechar</g:Button>
+			</g:at>
+			<g:at left="178" top="218">
+				<g:Button height="32px" width="100px" ui:field="buttonEmprestar">Emprestar</g:Button>
+			</g:at>
+			<g:at left="25" top="90">
+				<g:ListBox width="365px" height="22px" ui:field="listboxEmprestar"/>
+			</g:at>
+		</g:AbsolutePanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

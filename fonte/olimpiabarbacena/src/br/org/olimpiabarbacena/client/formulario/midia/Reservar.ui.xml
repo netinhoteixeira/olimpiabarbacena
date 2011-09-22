@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel width="686px" height="318px">
+		<g:AbsolutePanel height="280px" width="660">
+			<g:at left="21" top="85">
+				<g:TextBox width="355px" height="16px" ui:field="textboxEmprestado"/>
+			</g:at>
+			<g:at left="417" top="222">
+				<g:Button width="100px" height="32px" ui:field="buttonReservar">Reservar</g:Button>
+			</g:at>
+			<g:at left="20" top="63">
+				<g:Label text="Emprestado para"/>
+			</g:at>
+			<g:at left="21" top="134">
+				<g:Label text="Reservar para"/>
+			</g:at>
+			<g:at left="532" top="222">
+				<g:Button width="100px" height="32px" ui:field="buttonFechar">Fechar</g:Button>
+			</g:at>
+			<g:at left="21" top="156">
+				<g:ListBox width="365px" height="22px" ui:field="listboxReservar"/>
+			</g:at>
+			<g:at left="407" top="85">
+				<g:ListBox visibleItemCount="5" width="231px" height="131px" ui:field="listboxListaEspera"/>
+			</g:at>
+			<g:at left="408" top="63">
+				<g:Label width="99px" height="16px" text="Lista de Espera"/>
+			</g:at>
+		</g:AbsolutePanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 
