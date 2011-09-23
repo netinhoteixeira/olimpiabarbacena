@@ -3,6 +3,7 @@ package br.org.olimpiabarbacena.client.formulario.midia;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Button;
@@ -29,11 +30,13 @@ public class CD extends Composite {
 	@UiField ListBox listboxIdioma;
 	@UiField ListBox listboxCategoria;
 	@UiField CheckBox checkboxAudio;
+	DialogBox dialogo;
 
 	interface CDUiBinder extends UiBinder<Widget, CD> {
 	}
 
-	public CD() {
+	public CD(DialogBox dialogo) {
+		this.dialogo = dialogo;
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
@@ -46,4 +49,8 @@ public class CD extends Composite {
 	@UiHandler("buttonDevolucao")
 	void onButtonDevolucaoClick(ClickEvent event) {
 	}
+	@UiHandler("buttonFechar")
+	void onButtonFecharClick(ClickEvent event) {
+		dialogo.hide();
+	}	
 }

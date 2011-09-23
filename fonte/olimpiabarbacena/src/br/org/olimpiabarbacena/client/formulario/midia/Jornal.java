@@ -3,6 +3,7 @@ package br.org.olimpiabarbacena.client.formulario.midia;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Button;
@@ -31,11 +32,13 @@ public class Jornal extends Composite {
 	@UiField TextBox textboxISSN;
 	@UiField TextBox textboxMARC;
 	@UiField TextArea textareaDescricao;
+	DialogBox dialogo;
 
 	interface CDUiBinder extends UiBinder<Widget, Jornal> {
 	}
 
-	public Jornal() {
+	public Jornal(DialogBox dialogo) {
+		this.dialogo = dialogo;
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
@@ -47,5 +50,9 @@ public class Jornal extends Composite {
 	}
 	@UiHandler("buttonDevolucao")
 	void onButtonDevolucaoClick(ClickEvent event) {
+	}
+	@UiHandler("buttonFechar")
+	void onButtonFecharClick(ClickEvent event) {
+		dialogo.hide();
 	}
 }

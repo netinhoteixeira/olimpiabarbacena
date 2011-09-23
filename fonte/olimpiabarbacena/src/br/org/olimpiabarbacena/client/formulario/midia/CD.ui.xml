@@ -4,69 +4,69 @@
 	<ui:style>
 		
 	</ui:style>
-	<g:HTMLPanel width="686px" height="318px">
-		<g:AbsolutePanel height="318px" width="686px">
-			<g:at left="307" top="55">
+	<g:HTMLPanel width="686px" height="260px">
+		<g:AbsolutePanel height="260px" width="686px">
+			<g:at left="305" top="10">
 				<g:TextBox width="355px" height="16px" ui:field="textboxTitulo"/>
 			</g:at>
-			<g:at left="460" top="276">
+			<g:at left="458" top="216">
 				<g:Button width="100px" height="32px" ui:field="buttonSalvar">Salvar</g:Button>
 			</g:at>
-			<g:at left="267" top="61">
+			<g:at left="265" top="16">
 				<g:Label text="Título"/>
 			</g:at>
-			<g:at left="260" top="103">
+			<g:at left="258" top="58">
 				<g:Label text="Artista"/>
 			</g:at>
-			<g:at left="240" top="145">
+			<g:at left="238" top="100">
 				<g:Label text="Gravadora"/>
 			</g:at>
-			<g:at left="236" top="187">
+			<g:at left="234" top="142">
 				<g:Label text="Localidade"/>
 			</g:at>
-			<g:at left="260" top="226">
+			<g:at left="258" top="181">
 				<g:Label text="Idioma"/>
 			</g:at>
-			<g:at left="506" top="146">
+			<g:at left="504" top="101">
 				<g:Label text="Condição"/>
 			</g:at>
-			<g:at left="506" top="226">
+			<g:at left="504" top="181">
 				<g:Label text="Categoria"/>
 			</g:at>
-			<g:at left="12" top="276">
+			<g:at left="10" top="216">
 				<g:Button width="100px" height="32px" ui:field="buttonRemover" text="Remover"/>
 			</g:at>
-			<g:at left="572" top="276">
+			<g:at left="570" top="216">
 				<g:Button width="100px" height="32px" ui:field="buttonFechar">Fechar</g:Button>
 			</g:at>
-			<g:at left="124" top="276">
+			<g:at left="122" top="216">
 				<g:Button width="100px" height="32px" ui:field="buttonDevolucao" text="Devolução">Devolução</g:Button>
 			</g:at>
-			<g:at left="236" top="276">
+			<g:at left="234" top="216">
 				<g:Button width="100px" height="32px" ui:field="buttonEmprestimo">Empréstimo</g:Button>
 			</g:at>
-			<g:at left="348" top="276">
+			<g:at left="346" top="216">
 				<g:Button width="100px" height="32px" ui:field="buttonReservar">Reservar</g:Button>
 			</g:at>
-			<g:at left="307" top="97">
+			<g:at left="305" top="52">
 				<g:TextBox width="355px" height="16px" ui:field="textboxArtista"/>
 			</g:at>
-			<g:at left="307" top="139">
+			<g:at left="305" top="94">
 				<g:TextBox width="176" ui:field="textboxGravadora"/>
 			</g:at>
-			<g:at left="571" top="140">
+			<g:at left="569" top="95">
 				<g:TextBox width="91px" height="16px" ui:field="textboxCondicao"/>
 			</g:at>
-			<g:at left="307" top="181">
+			<g:at left="305" top="136">
 				<g:TextBox width="176" height="" ui:field="textboxLocalidade"/>
 			</g:at>
-			<g:at left="307" top="223">
+			<g:at left="305" top="178">
 				<g:ListBox width="186px" height="22" ui:field="listboxIdioma"/>
 			</g:at>
-			<g:at left="572" top="223">
+			<g:at left="570" top="178">
 				<g:ListBox width="100px" height="22" ui:field="listboxCategoria"/>
 			</g:at>
-			<g:at left="571" top="185">
+			<g:at left="569" top="140">
 				<g:CheckBox text="Áudio" ui:field="checkboxAudio"/>
 			</g:at>
 		</g:AbsolutePanel>

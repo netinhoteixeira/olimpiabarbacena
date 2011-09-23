@@ -1,6 +1,8 @@
 package br.org.olimpiabarbacena.client;
 
 import br.org.olimpiabarbacena.client.formulario.midia.Livro;
+import br.org.olimpiabarbacena.client.formulario.midia.CD;
+import br.org.olimpiabarbacena.client.formulario.midia.Jornal;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -22,6 +24,8 @@ public class BarraControle extends Composite {
 	@UiField Button buttonMembro;
 	DialogBox dialogo;
 	Livro livro;
+	CD CD;
+	Jornal jornal;
 
 	interface BarraControleUiBinder extends UiBinder<Widget, BarraControle> {
 	}
@@ -50,8 +54,22 @@ public class BarraControle extends Composite {
 			livro = new Livro(dialogo);
 			dialogo.setWidget(livro);
 			dialogo.center();
-		} else if (value.equals("CD")) {
+		} else if (value.equals("CD")||value.equals("DVD")) {
+			dialogo = new DialogBox(false);
+			dialogo.setWidth("686px");
+			dialogo.setHeight("260px");
 			
+			CD = new CD(dialogo);
+			dialogo.setWidget(CD);
+			dialogo.center();			
+		} else if (value.equals("JORNAL")||value.equals("REVISTA")) {
+			dialogo = new DialogBox(false);
+			dialogo.setWidth("686px");
+			dialogo.setHeight("360px");
+			
+			jornal = new Jornal(dialogo);
+			dialogo.setWidget(jornal);
+			dialogo.center();			
 		}
 	}
 }
