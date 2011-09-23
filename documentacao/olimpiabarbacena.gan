@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Biblioteca Comunitária Olímpia Barbacena" company="Francisco Ernesto Teixeira e Jady Pâmella Barbacena" webLink="http://olimpiabarbacena.appspot.com/" view-date="2011-08-20" view-index="0" gantt-divider-location="462" resource-divider-location="300" version="2.0">
+<project name="Biblioteca Comunitária Olímpia Barbacena" company="Francisco Ernesto Teixeira e Jady Pâmella Barbacena" webLink="http://olimpiabarbacena.appspot.com/" view-date="2011-10-28" view-index="0" gantt-divider-location="462" resource-divider-location="300" version="2.0">
     <description/>
     <view zooming-state="default:2" id="gantt-chart"/>
     <view id="resource-table">
@@ -43,15 +43,15 @@
                 <task id="17" name="Modelagem de Dados" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
                 <task id="101" name="Apresentação do Planejamento" color="#8cb6ce" meeting="false" start="2011-09-21" duration="12" complete="0" priority="1" expand="true"/>
             </task>
-            <task id="8" name="Elaboração" color="#8cb6ce" meeting="false" start="2011-09-07" duration="10" complete="0" priority="1" expand="true">
-                <task id="9" name="Cadastro de Membro" color="#8cb6ce" meeting="false" start="2011-09-07" duration="10" complete="0" priority="1" expand="true">
+            <task id="8" name="Elaboração" color="#8cb6ce" meeting="false" start="2011-09-01" duration="42" complete="0" priority="1" expand="true">
+                <task id="9" name="Cadastro de Membro" color="#8cb6ce" meeting="false" start="2011-09-01" duration="42" complete="0" priority="1" expand="true">
                     <task id="102" name="Interface" color="#8cb6ce" meeting="false" start="2011-09-15" duration="4" complete="0" priority="1" expand="true"/>
-                    <task id="10" name="Adicionar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
-                    <task id="11" name="Listar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
-                    <task id="12" name="Pesquisar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
-                    <task id="13" name="Editar" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
-                    <task id="14" name="Remover" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
-                    <task id="92" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-09-07" duration="1" complete="0" priority="1" expand="true"/>
+                    <task id="10" name="Adicionar" color="#8cb6ce" meeting="false" start="2011-09-21" duration="3" complete="0" priority="1" expand="true"/>
+                    <task id="11" name="Listar" color="#8cb6ce" meeting="false" start="2011-09-26" duration="2" complete="0" priority="1" expand="true"/>
+                    <task id="12" name="Pesquisar" color="#8cb6ce" meeting="false" start="2011-09-28" duration="1" complete="0" priority="1" expand="true"/>
+                    <task id="13" name="Editar" color="#8cb6ce" meeting="false" start="2011-09-29" duration="2" complete="0" priority="1" expand="true"/>
+                    <task id="14" name="Remover" color="#8cb6ce" meeting="false" start="2011-09-01" duration="1" complete="0" priority="1" expand="true"/>
+                    <task id="92" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-09-02" duration="41" complete="0" priority="1" expand="true"/>
                 </task>
                 <task id="15" name="Cadastro de Livro" color="#8cb6ce" meeting="false" start="2011-09-07" duration="10" complete="0" priority="1" expand="true">
                     <task id="103" name="Interface" color="#8cb6ce" meeting="false" start="2011-09-15" duration="4" complete="0" priority="1" expand="true"/>
