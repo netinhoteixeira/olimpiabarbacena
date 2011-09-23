@@ -1,16 +1,17 @@
 package br.org.olimpiabarbacena.client.formulario.midia;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.Widget;
-import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TextArea;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.Widget;
 
 public class Livro extends Composite {
 
@@ -32,11 +33,13 @@ public class Livro extends Composite {
 	@UiField TextBox textboxISBN;
 	@UiField TextBox textboxMARC;
 	@UiField TextArea textareaDescricao;
+	DialogBox dialogo;
 
 	interface CDUiBinder extends UiBinder<Widget, Livro> {
 	}
 
-	public Livro() {
+	public Livro(DialogBox dialogo) {
+		this.dialogo = dialogo;
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
@@ -48,5 +51,9 @@ public class Livro extends Composite {
 	}
 	@UiHandler("buttonDevolucao")
 	void onButtonDevolucaoClick(ClickEvent event) {
+	}
+	@UiHandler("buttonFechar")
+	void onButtonFecharClick(ClickEvent event) {
+		dialogo.hide();
 	}
 }
