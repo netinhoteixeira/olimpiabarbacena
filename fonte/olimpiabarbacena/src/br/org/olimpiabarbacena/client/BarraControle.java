@@ -27,6 +27,9 @@ public class BarraControle extends Composite {
 		// adicionar tipos de mídia
 		comboMidia.addItem("Livro", "LIVRO");
 		comboMidia.addItem("CD", "CD");
+		comboMidia.addItem("DVD", "DVD");
+		comboMidia.addItem("Jornal", "JORNAL");
+		comboMidia.addItem("Revista", "REVISTA");
 		
 	}
 
