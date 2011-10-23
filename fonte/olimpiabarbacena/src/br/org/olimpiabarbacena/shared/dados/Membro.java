@@ -22,28 +22,28 @@ public class Membro implements IsSerializable {
 
 	@Persistent
 	private String nome;
-	
+
 	@Persistent
 	private Date nascimento;
-	
+
 	@Persistent
 	private Sexo sexo;
 
 	@Persistent
 	private String cpf;
-	
+
 	@Persistent
 	private String telefone;
-	
+
 	@Persistent
 	private String email;
 
 	@Persistent
 	private String endereco;
-	
+
 	@Persistent
 	private String cidade;
-	
+
 	@Persistent
 	private String estado;
 
@@ -101,7 +101,7 @@ public class Membro implements IsSerializable {
 	public String getTelefone() {
 		return this.telefone;
 	}
-	
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
@@ -125,7 +125,7 @@ public class Membro implements IsSerializable {
 	public String getCidade() {
 		return this.cidade;
 	}
-	
+
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}

@@ -45,18 +45,12 @@ public class MembroServiceImpl extends RemoteServiceServlet implements
 			pm.close();
 		}
 		
+		// DONE: Tem que criar um novo objeto para retornar o resultado
 		if (membros != null) {
 			if (!membros.isEmpty()) {
 				for (Membro membro : membros) {
 					result.add(membro);
 				}
-			}
-		}
-				
-		if (!membros.isEmpty()) {
-			for (Membro membro : membros) {
-				System.out.println(membro.getId());
-				System.out.println(membro.getNome());
 			}
 		}
 		
