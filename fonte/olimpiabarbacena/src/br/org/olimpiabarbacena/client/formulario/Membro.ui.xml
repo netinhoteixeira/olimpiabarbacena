@@ -1,76 +1,85 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.datepicker.client">
 	<ui:style>
 		
 	</ui:style>
-	<g:HTMLPanel width="686px" height="318px">
-		<g:AbsolutePanel height="318px" width="455px">
-			<g:at left="81" top="48">
-				<g:TextBox width="355px" height="16px" ui:field="textboxNome"/>
+	<g:HTMLPanel>
+		<g:AbsolutePanel height="319px" width="466px">
+			<g:at left="47" top="15">
+				<g:Label text="Nome" />
 			</g:at>
-			<g:at left="234" top="276">
-				<g:Button width="100px" height="32px" ui:field="buttonSalvar">Salvar</g:Button>
+			<g:at left="87" top="10">
+				<g:TextBox width="355px" height="16px" ui:field="textboxNome" />
 			</g:at>
-			<g:at left="41" top="54">
-				<g:Label text="Nome"/>
+			<g:at left="10" top="51">
+				<g:Label text="Nascimento" />
 			</g:at>
-			<g:at left="20" top="187">
-				<g:Label text="Endereço"/>
+			<g:at left="87" top="44">
+				<p1:DateBox ui:field="dateboxNascimento" />
 			</g:at>
-			<g:at left="34" top="230">
-				<g:Label text="Estado"/>
+			<g:at left="349" top="51">
+				<g:Label text="Sexo" />
 			</g:at>
-			<g:at left="356" top="230">
-				<g:Label text="Sexo"/>
+			<g:at left="385" top="50">
+				<g:RadioButton name="sexo" text="M" checked="true" ui:field="radioSexoMasculino" />
 			</g:at>
-			<g:at left="346" top="276">
-				<g:Button width="100px" height="32px" ui:field="buttonFechar">Fechar</g:Button>
+			<g:at left="423" top="50">
+				<g:RadioButton name="sexo" text="F" ui:field="radioSexoFeminino" />
 			</g:at>
-			<g:at left="10" top="276">
+			<g:at left="55" top="87">
+				<g:Label text="CPF" />
+			</g:at>
+			<g:at left="87" top="82">
+				<g:TextBox width="147px" ui:field="textboxCPF" height="16px" />
+			</g:at>
+			<g:at left="268" top="87">
+				<g:Label text="Telefone" />
+			</g:at>
+			<g:at left="322" top="82">
+				<g:TextBox width="120px" height="16px" ui:field="textboxTelefone" />
+			</g:at>
+			<g:at left="44" top="121">
+				<g:Label text="E-mail" />
+			</g:at>
+			<g:at left="87" top="116">
+				<g:TextBox width="355px" height="16px" ui:field="textboxEmail" />
+			</g:at>
+			<g:at left="27" top="155">
+				<g:Label text="Endereço" width="54px" height="18px" />
+			</g:at>
+			<g:at left="87" top="150">
+				<g:TextBox width="355px" height="16px" ui:field="textboxEndereco" />
+			</g:at>
+			<g:at left="43" top="190">
+				<g:Label width="38px" height="16px" text="Cidade" />
+			</g:at>
+			<g:at left="87" top="184">
+				<g:TextBox width="240px" height="16px" ui:field="textboxCidade" />
+			</g:at>
+			<g:at left="351" top="189">
+				<g:Label text="Estado" />
+			</g:at>
+			<g:at left="398" top="187">
+				<g:ListBox width="54px" height="22px" ui:field="comboEstado" />
+			</g:at>
+			<g:at left="54" top="223">
+				<g:Label text="CEP" />
+			</g:at>
+			<g:at left="87" top="218">
+				<g:TextBox width="120px" height="16px" ui:field="textboxCEP" />
+			</g:at>
+			<g:at left="13" top="272">
 				<g:Button width="100px" height="32px" ui:field="buttonHistorico">Histórico</g:Button>
 			</g:at>
-			<g:at left="122" top="276">
+			<g:at left="126" top="272">
 				<g:Button width="100px" height="32px" ui:field="buttonExcluir">Excluir</g:Button>
 			</g:at>
-			<g:at left="81" top="92">
-				<g:TextBox width="120px" ui:field="textboxCPF" height="16px"/>
+			<g:at left="239" top="272">
+				<g:Button width="100px" height="32px" ui:field="buttonSalvar">Salvar</g:Button>
 			</g:at>
-			<g:at left="316" top="92">
-				<g:TextBox width="120px" height="16px" ui:field="textboxEmail"/>
-			</g:at>
-			<g:at left="81" top="180">
-				<g:TextBox width="355px" height="16px" ui:field="textboxEndereco"/>
-			</g:at>
-			<g:at left="81" top="227">
-				<g:ListBox width="54px" height="22px" ui:field="listboxEstado"/>
-			</g:at>
-			<g:at left="392" top="227">
-				<g:ListBox width="54px" height="22px" ui:field="listboxSexo"/>
-			</g:at>
-			<g:at left="316" top="136">
-				<g:TextBox width="120px" height="16px" ui:field="textboxCEP"/>
-			</g:at>
-			<g:at left="81" top="136">
-				<g:TextBox width="120px" height="16px" ui:field="textboxTelefone"/>
-			</g:at>
-			<g:at left="196" top="224">
-				<g:TextBox width="136px" height="16px" ui:field="textboxCidade"/>
-			</g:at>
-			<g:at left="152" top="230">
-				<g:Label width="38px" height="16px" text="Cidade"/>
-			</g:at>
-			<g:at left="49" top="98">
-				<g:Label text="CPF"/>
-			</g:at>
-			<g:at left="273" top="98">
-				<g:Label text="E-mail"/>
-			</g:at>
-			<g:at left="283" top="142">
-				<g:Label text="CEP"/>
-			</g:at>
-			<g:at left="27" top="142">
-				<g:Label text="Telefone"/>
+			<g:at left="352" top="272">
+				<g:Button width="100px" height="32px" ui:field="buttonFechar">Fechar</g:Button>
 			</g:at>
 		</g:AbsolutePanel>
 	</g:HTMLPanel>

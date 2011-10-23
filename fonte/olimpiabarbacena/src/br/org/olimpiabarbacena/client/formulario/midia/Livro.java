@@ -16,23 +16,40 @@ import com.google.gwt.user.client.ui.Widget;
 public class Livro extends Composite {
 
 	private static CDUiBinder uiBinder = GWT.create(CDUiBinder.class);
-	@UiField Button buttonSalvar;
-	@UiField TextBox textboxTitulo;
-	@UiField Button buttonRemover;
-	@UiField Button buttonDevolucao;
-	@UiField Button buttonFechar;
-	@UiField Button buttonReservar;
-	@UiField Button buttonEmprestimo;
-	@UiField TextBox textboxAutor;
-	@UiField TextBox textboxEditora;
-	@UiField TextBox textboxEdicao;
-	@UiField TextBox textboxLocalidade;
-	@UiField ListBox listboxIdioma;
-	@UiField ListBox listboxCategoria;
-	@UiField TextBox textboxCondicao;
-	@UiField TextBox textboxISBN;
-	@UiField TextBox textboxMARC;
-	@UiField TextArea textareaDescricao;
+	@UiField
+	Button buttonSalvar;
+	@UiField
+	TextBox textboxTitulo;
+	@UiField
+	Button buttonRemover;
+	@UiField
+	Button buttonDevolucao;
+	@UiField
+	Button buttonFechar;
+	@UiField
+	Button buttonReservar;
+	@UiField
+	Button buttonEmprestimo;
+	@UiField
+	TextBox textboxAutor;
+	@UiField
+	TextBox textboxEditora;
+	@UiField
+	TextBox textboxEdicao;
+	@UiField
+	TextBox textboxLocalidade;
+	@UiField
+	ListBox listboxIdioma;
+	@UiField
+	ListBox listboxCategoria;
+	@UiField
+	TextBox textboxCondicao;
+	@UiField
+	TextBox textboxISBN;
+	@UiField
+	TextBox textboxMARC;
+	@UiField
+	TextArea textareaDescricao;
 	DialogBox dialogo;
 
 	interface CDUiBinder extends UiBinder<Widget, Livro> {
@@ -46,12 +63,15 @@ public class Livro extends Composite {
 	@UiHandler("buttonSalvar")
 	void onButtonSalvarClick(ClickEvent event) {
 	}
+
 	@UiHandler("buttonRemover")
 	void onButtonRemoverClick(ClickEvent event) {
 	}
+
 	@UiHandler("buttonDevolucao")
 	void onButtonDevolucaoClick(ClickEvent event) {
 	}
+
 	@UiHandler("buttonFechar")
 	void onButtonFecharClick(ClickEvent event) {
 		dialogo.hide();

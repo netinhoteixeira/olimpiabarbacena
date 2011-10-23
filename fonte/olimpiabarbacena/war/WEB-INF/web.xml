@@ -4,8 +4,17 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
-	<!-- TODO: Add <servlet> tags for each servlet here. -->
-	<!-- TODO: Add <servlet-mapping> tags for each <servlet> here. -->
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>membroServiceImpl</servlet-name>
+		<servlet-class>br.org.olimpiabarbacena.server.rpc.MembroServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>membroServiceImpl</servlet-name>
+		<url-pattern>/rpc/membro</url-pattern>
+	</servlet-mapping>
+
 	<welcome-file-list>
 		<welcome-file>Principal.html</welcome-file>
 	</welcome-file-list>
