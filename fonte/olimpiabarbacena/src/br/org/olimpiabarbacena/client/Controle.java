@@ -42,10 +42,10 @@ public class Controle extends Composite {
 
 		// adicionar tipos de mídia
 		comboMidia.addItem("Selecione", "");
-		comboMidia.addItem("Livro", "LIVRO");
 		comboMidia.addItem("CD", "CD");
 		comboMidia.addItem("DVD", "DVD");
 		comboMidia.addItem("Jornal", "JORNAL");
+		comboMidia.addItem("Livro", "LIVRO");
 		comboMidia.addItem("Revista", "REVISTA");
 	}
 
