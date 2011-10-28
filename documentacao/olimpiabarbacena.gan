@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Biblioteca Comunitária Olímpia Barbacena" company="Francisco Ernesto Teixeira e Jady Pâmella Barbacena" webLink="http://olimpiabarbacena.appspot.com/" view-date="2011-10-15" view-index="0" gantt-divider-location="1287" resource-divider-location="300" version="2.0">
+<project name="Biblioteca Comunitária Olímpia Barbacena" company="Francisco Ernesto Teixeira e Jady Pâmella Barbacena" webLink="http://olimpiabarbacena.appspot.com/" view-date="2011-10-24" view-index="0" gantt-divider-location="593" resource-divider-location="300" version="2.0">
     <description/>
-    <view zooming-state="default:2" id="gantt-chart"/>
+    <view zooming-state="default:0" id="gantt-chart"/>
     <view id="resource-table">
         <field id="0" name="Nome" width="54" order="0"/>
         <field id="1" name="Função" width="45" order="1"/>
@@ -31,13 +31,13 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="82" name="Projeto &quot;Biblioteca Comunitária&quot;" color="#8cb6ce" meeting="false" start="2011-08-05" duration="74" complete="56" priority="1" expand="true">
+        <task id="82" name="Projeto &quot;Biblioteca Comunitária&quot;" color="#8cb6ce" meeting="false" start="2011-08-05" duration="75" complete="60" priority="1" expand="true">
             <task id="112" name="Início" color="#8cb6ce" meeting="false" start="2011-08-05" duration="1" complete="0" priority="1" expand="true">
                 <depend id="0" type="2" difference="0" hardness="Strong"/>
             </task>
             <task id="0" name="Planejamento" color="#8cb6ce" meeting="false" start="2011-08-08" duration="44" complete="100" priority="1" expand="true">
                 <depend id="8" type="2" difference="0" hardness="Strong"/>
-                <task id="1" name="Definição do Tema" color="#e8ac40" meeting="false" start="2011-08-08" duration="10" complete="100" priority="2" expand="true"/>
+                <task id="1" name="Definição do Tema" color="#8cb6ce" meeting="false" start="2011-08-08" duration="10" complete="100" priority="2" expand="true"/>
                 <task id="4" name="Questionamentos" color="#8cb6ce" meeting="false" start="2011-09-20" duration="7" complete="100" priority="1" expand="true"/>
                 <task id="3" name="Pesquisa Bibliográfica" color="#8cb6ce" meeting="false" start="2011-09-05" duration="1" complete="100" priority="1" expand="true"/>
                 <task id="2" name="Cronograma" color="#8cb6ce" meeting="false" start="2011-09-07" duration="10" complete="100" priority="1" expand="true"/>
@@ -49,15 +49,15 @@
                     <depend id="8" type="2" difference="0" hardness="Strong"/>
                 </task>
             </task>
-            <task id="8" name="Execução" color="#8cb6ce" meeting="false" start="2011-10-07" duration="26" complete="27" priority="1" expand="true">
-                <task id="9" name="Cadastro de Membro" color="#8cb6ce" meeting="false" start="2011-10-07" duration="21" complete="31" priority="1" expand="true">
+            <task id="8" name="Execução" color="#8cb6ce" meeting="false" start="2011-10-07" duration="26" complete="35" priority="1" expand="true">
+                <task id="9" name="Cadastro de Membro" color="#8cb6ce" meeting="false" start="2011-10-07" duration="21" complete="63" priority="1" expand="true">
                     <task id="102" name="Interface" color="#8cb6ce" meeting="false" start="2011-10-07" duration="4" complete="100" priority="1" expand="true"/>
                     <task id="10" name="Adicionar" color="#8cb6ce" meeting="false" start="2011-10-21" duration="1" complete="100" priority="1" expand="true"/>
-                    <task id="11" name="Listar" color="#8cb6ce" meeting="false" start="2011-10-24" duration="2" complete="0" priority="1" expand="true"/>
-                    <task id="12" name="Pesquisar" color="#8cb6ce" meeting="false" start="2011-10-27" duration="2" complete="0" priority="1" expand="true"/>
+                    <task id="11" name="Listar" color="#8cb6ce" meeting="false" start="2011-10-24" duration="2" complete="100" priority="1" expand="true"/>
+                    <task id="12" name="Pesquisar" color="#8cb6ce" meeting="false" start="2011-10-27" duration="2" complete="100" priority="1" expand="true"/>
                     <task id="13" name="Editar" color="#8cb6ce" meeting="false" start="2011-10-31" duration="2" complete="0" priority="1" expand="true"/>
                     <task id="14" name="Remover" color="#8cb6ce" meeting="false" start="2011-11-03" duration="1" complete="0" priority="1" expand="true"/>
-                    <task id="92" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-10-24" duration="10" complete="20" priority="1" expand="true"/>
+                    <task id="92" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-10-24" duration="10" complete="50" priority="1" expand="true"/>
                 </task>
                 <task id="15" name="Cadastro de Mídia" color="#8cb6ce" meeting="false" start="2011-10-07" duration="25" complete="11" priority="1" expand="true">
                     <task id="103" name="Interface" color="#8cb6ce" meeting="false" start="2011-10-07" duration="4" complete="100" priority="1" expand="true"/>
@@ -82,20 +82,20 @@
                     <task id="99" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-11-10" duration="2" complete="0" priority="1" expand="true"/>
                 </task>
             </task>
-            <task id="84" name="Monitoramento e Controle" color="#8cb6ce" meeting="false" start="2011-10-24" duration="13" complete="9" priority="1" expand="true">
-                <task id="100" name="Teste do Projeto" color="#8cb6ce" meeting="false" start="2011-10-24" duration="11" complete="20" priority="1" expand="true"/>
+            <task id="84" name="Monitoramento e Controle" color="#8cb6ce" meeting="false" start="2011-10-24" duration="13" complete="10" priority="1" expand="true">
+                <task id="100" name="Teste do Projeto" color="#8cb6ce" meeting="false" start="2011-10-24" duration="11" complete="23" priority="1" expand="true"/>
                 <task id="86" name="Ajustes" color="#8cb6ce" meeting="false" start="2011-10-24" duration="13" complete="0" priority="1" expand="true">
                     <depend id="88" type="2" difference="0" hardness="Strong"/>
                 </task>
             </task>
-            <task id="88" name="Encerramento" color="#8cb6ce" meeting="false" start="2011-11-08" duration="7" complete="0" priority="1" expand="true">
+            <task id="88" name="Encerramento" color="#8cb6ce" meeting="false" start="2011-11-10" duration="5" complete="0" priority="1" expand="true">
                 <task id="89" name="Implantação Solução Final" color="#8cb6ce" meeting="false" start="2011-11-16" duration="1" complete="0" priority="1" expand="true"/>
                 <task id="90" name="Pesquisa de satisfação do cliente" color="#8cb6ce" meeting="false" start="2011-11-10" duration="3" complete="0" priority="1" expand="true"/>
-                <task id="91" name="Acompanhamento da Operação" color="#8cb6ce" meeting="false" start="2011-11-08" duration="5" complete="0" priority="1" expand="true">
+                <task id="91" name="Acompanhamento da Operação" color="#8cb6ce" meeting="false" start="2011-11-10" duration="5" complete="0" priority="1" expand="true">
                     <depend id="83" type="2" difference="0" hardness="Strong"/>
                 </task>
             </task>
-            <task id="83" name="Final de Projeto" color="#8cb6ce" meeting="false" start="2011-11-15" duration="1" complete="0" priority="1" expand="true"/>
+            <task id="83" name="Final de Projeto" color="#8cb6ce" meeting="false" start="2011-11-17" duration="1" complete="0" priority="1" expand="true"/>
         </task>
     </tasks>
     <resources>
@@ -111,10 +111,10 @@
     </allocations>
     <vacations/>
     <taskdisplaycolumns>
-        <displaycolumn property-id="tpd3" order="0" width="227"/>
-        <displaycolumn property-id="tpd4" order="1" width="15"/>
-        <displaycolumn property-id="tpd5" order="2" width="15"/>
-        <displaycolumn property-id="tpd7" order="3" width="75"/>
+        <displaycolumn property-id="tpd3" order="0" width="170"/>
+        <displaycolumn property-id="tpd4" order="1" width="68"/>
+        <displaycolumn property-id="tpd5" order="2" width="47"/>
+        <displaycolumn property-id="tpd7" order="3" width="47"/>
     </taskdisplaycolumns>
     <previous/>
     <roles roleset-name="Default"/>
