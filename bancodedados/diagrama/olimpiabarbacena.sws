@@ -4,9 +4,10 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{990EC8CC-285D-4E84-A6DE-D37B0382B1D3}" Name="Conceitual" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="olimpiabarbacena.cdm"/>
-		<Model Expanded="Yes" ID="{AD8FAC07-695C-425D-9F97-83187EB7EBBE}" Name="Logico" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" URL="olimpiabarbacena.ldm"/>
-		<Model Expanded="Yes" ID="{C04FD477-7483-4AF7-8087-58F88FCF84C8}" Name="Fisico" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="olimpiabarbacena.pdm"/>
+		<Model Expanded="Yes" ID="{990EC8CC-285D-4E84-A6DE-D37B0382B1D3}" Loaded="No" Name="Conceitual" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="olimpiabarbacena.cdm"/>
+		<Model Expanded="Yes" ID="{AD8FAC07-695C-425D-9F97-83187EB7EBBE}" Loaded="No" Name="Logico" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" URL="olimpiabarbacena.ldm"/>
+		<Model Expanded="Yes" ID="{C04FD477-7483-4AF7-8087-58F88FCF84C8}" Loaded="No" Name="Fisico" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="olimpiabarbacena.pdm"/>
+		<Model Expanded="Yes" ID="{FD592AEE-6670-4CA4-A9D8-B43F79B37B34}" Name="ConceptualDataModel_1" Selected="Yes" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="/Users/francisco.teixeira/Downloads/GRUPO3/GRUPO3/ConceptualDataModel_1GRUPO 3.cdm"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
