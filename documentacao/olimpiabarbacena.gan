@@ -31,7 +31,7 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="82" name="Projeto &quot;Biblioteca Comunitária&quot;" color="#8cb6ce" meeting="false" start="2011-08-05" duration="75" complete="61" priority="1" expand="true">
+        <task id="82" name="Projeto &quot;Biblioteca Comunitária&quot;" color="#8cb6ce" meeting="false" start="2011-08-05" duration="75" complete="78" priority="1" expand="true">
             <task id="112" name="Início do Projeto" color="#8cb6ce" meeting="false" start="2011-08-05" duration="1" complete="100" priority="1" expand="true">
                 <depend id="0" type="2" difference="0" hardness="Strong"/>
             </task>
@@ -49,31 +49,31 @@
                     <depend id="8" type="2" difference="0" hardness="Strong"/>
                 </task>
             </task>
-            <task id="8" name="Execução" color="#8cb6ce" meeting="false" start="2011-10-07" duration="26" complete="35" priority="1" expand="true">
-                <task id="9" name="Manter Membro" color="#8cb6ce" meeting="false" start="2011-10-07" duration="21" complete="63" priority="1" expand="true">
+            <task id="8" name="Execução" color="#8cb6ce" meeting="false" start="2011-10-07" duration="26" complete="76" priority="1" expand="true">
+                <task id="9" name="Manter Membro" color="#8cb6ce" meeting="false" start="2011-10-07" duration="21" complete="100" priority="1" expand="true">
                     <task id="102" name="Interface" color="#8cb6ce" meeting="false" start="2011-10-07" duration="4" complete="100" priority="1" expand="true"/>
                     <task id="10" name="Adicionar" color="#8cb6ce" meeting="false" start="2011-10-21" duration="1" complete="100" priority="1" expand="true"/>
                     <task id="11" name="Listar" color="#8cb6ce" meeting="false" start="2011-10-24" duration="2" complete="100" priority="1" expand="true"/>
                     <task id="12" name="Pesquisar" color="#8cb6ce" meeting="false" start="2011-10-27" duration="2" complete="100" priority="1" expand="true"/>
-                    <task id="13" name="Editar" color="#8cb6ce" meeting="false" start="2011-10-31" duration="2" complete="0" priority="1" expand="true"/>
-                    <task id="14" name="Remover" color="#8cb6ce" meeting="false" start="2011-11-03" duration="1" complete="0" priority="1" expand="true"/>
-                    <task id="92" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-10-24" duration="10" complete="50" priority="1" expand="true"/>
+                    <task id="13" name="Editar" color="#8cb6ce" meeting="false" start="2011-10-31" duration="2" complete="100" priority="1" expand="true"/>
+                    <task id="14" name="Remover" color="#8cb6ce" meeting="false" start="2011-11-03" duration="1" complete="100" priority="1" expand="true"/>
+                    <task id="92" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-10-24" duration="10" complete="100" priority="1" expand="true"/>
                 </task>
-                <task id="15" name="Manter Mídia" color="#8cb6ce" meeting="false" start="2011-10-07" duration="25" complete="11" priority="1" expand="true">
+                <task id="15" name="Manter Mídia" color="#8cb6ce" meeting="false" start="2011-10-07" duration="25" complete="74" priority="1" expand="true">
                     <task id="103" name="Interface" color="#8cb6ce" meeting="false" start="2011-10-07" duration="4" complete="100" priority="1" expand="true"/>
-                    <task id="27" name="Adicionar" color="#8cb6ce" meeting="false" start="2011-10-24" duration="4" complete="0" priority="1" expand="false"/>
-                    <task id="25" name="Listar" color="#8cb6ce" meeting="false" start="2011-10-31" duration="4" complete="0" priority="1" expand="false"/>
-                    <task id="23" name="Pesquisar" color="#8cb6ce" meeting="false" start="2011-10-31" duration="5" complete="0" priority="1" expand="false"/>
+                    <task id="27" name="Adicionar" color="#8cb6ce" meeting="false" start="2011-10-24" duration="4" complete="100" priority="1" expand="false"/>
+                    <task id="25" name="Listar" color="#8cb6ce" meeting="false" start="2011-10-31" duration="4" complete="100" priority="1" expand="false"/>
+                    <task id="23" name="Pesquisar" color="#8cb6ce" meeting="false" start="2011-10-31" duration="5" complete="100" priority="1" expand="false"/>
                     <task id="21" name="Editar" color="#8cb6ce" meeting="false" start="2011-11-07" duration="2" complete="0" priority="1" expand="false"/>
                     <task id="19" name="Remover" color="#8cb6ce" meeting="false" start="2011-11-10" duration="1" complete="0" priority="1" expand="false"/>
-                    <task id="93" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-10-24" duration="14" complete="0" priority="1" expand="true"/>
+                    <task id="93" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-10-24" duration="14" complete="60" priority="1" expand="true"/>
                 </task>
-                <task id="75" name="Manter Reserva" color="#8cb6ce" meeting="false" start="2011-10-07" duration="21" complete="30" priority="1" expand="true">
+                <task id="75" name="Manter Reserva" color="#8cb6ce" meeting="false" start="2011-10-07" duration="21" complete="100" priority="1" expand="true">
                     <task id="108" name="Interface" color="#8cb6ce" meeting="false" start="2011-10-07" duration="4" complete="100" priority="1" expand="true"/>
-                    <task id="76" name="Reservar Mídia" color="#8cb6ce" meeting="false" start="2011-10-31" duration="1" complete="0" priority="1" expand="true"/>
-                    <task id="77" name="Cancelar Reserva" color="#8cb6ce" meeting="false" start="2011-11-01" duration="1" complete="0" priority="1" expand="true"/>
-                    <task id="78" name="Tornar Reserva em Empréstimo" color="#8cb6ce" meeting="false" start="2011-11-02" duration="3" complete="0" priority="1" expand="true"/>
-                    <task id="98" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-11-01" duration="4" complete="0" priority="1" expand="true"/>
+                    <task id="76" name="Reservar Mídia" color="#8cb6ce" meeting="false" start="2011-10-31" duration="1" complete="100" priority="1" expand="true"/>
+                    <task id="77" name="Cancelar Reserva" color="#8cb6ce" meeting="false" start="2011-11-01" duration="1" complete="100" priority="1" expand="true"/>
+                    <task id="78" name="Tornar Reserva em Empréstimo" color="#8cb6ce" meeting="false" start="2011-11-02" duration="3" complete="100" priority="1" expand="true"/>
+                    <task id="98" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-11-01" duration="4" complete="100" priority="1" expand="true"/>
                 </task>
                 <task id="79" name="Manter Empréstimo" color="#8cb6ce" meeting="false" start="2011-10-07" duration="26" complete="40" priority="1" expand="true">
                     <task id="109" name="Interface" color="#8cb6ce" meeting="false" start="2011-10-07" duration="4" complete="100" priority="1" expand="true"/>
@@ -82,9 +82,9 @@
                     <task id="99" name="Teste da Funcionalidade" color="#8cb6ce" meeting="false" start="2011-11-10" duration="2" complete="0" priority="1" expand="true"/>
                 </task>
             </task>
-            <task id="84" name="Monitoramento e Controle" color="#8cb6ce" meeting="false" start="2011-10-24" duration="13" complete="10" priority="1" expand="true">
-                <task id="100" name="Teste do Projeto" color="#8cb6ce" meeting="false" start="2011-10-24" duration="11" complete="23" priority="1" expand="true"/>
-                <task id="86" name="Ajustes" color="#8cb6ce" meeting="false" start="2011-10-24" duration="13" complete="0" priority="1" expand="true">
+            <task id="84" name="Monitoramento e Controle" color="#8cb6ce" meeting="false" start="2011-10-24" duration="13" complete="43" priority="1" expand="true">
+                <task id="100" name="Teste do Projeto" color="#8cb6ce" meeting="false" start="2011-10-24" duration="11" complete="60" priority="1" expand="true"/>
+                <task id="86" name="Ajustes" color="#8cb6ce" meeting="false" start="2011-10-24" duration="13" complete="30" priority="1" expand="true">
                     <depend id="88" type="2" difference="0" hardness="Strong"/>
                 </task>
             </task>
