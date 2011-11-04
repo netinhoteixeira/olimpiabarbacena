@@ -8,9 +8,12 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 
 public interface MembroServiceAsync {
 
-	void salvar(Membro membro, AsyncCallback<Void> callback);
+	void salvar(Membro membro, AsyncCallback<Void> callback)
+			throws IllegalArgumentException;
 
-	void remover(Membro membro, AsyncCallback<Void> callback);
+	void remover(Membro membro, AsyncCallback<Void> callback)
+			throws IllegalArgumentException;
 
-	void listar(AsyncCallback<List<Membro>> callback);
+	void listar(String nome, AsyncCallback<List<Membro>> callback)
+			throws IllegalArgumentException;
 }

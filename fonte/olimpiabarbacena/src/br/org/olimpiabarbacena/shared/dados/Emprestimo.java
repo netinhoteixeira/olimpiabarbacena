@@ -2,6 +2,7 @@ package br.org.olimpiabarbacena.shared.dados;
 
 import java.util.Date;
 
+import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
@@ -15,7 +16,8 @@ public class Emprestimo implements IsSerializable {
 
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	private Long id;
+	@Extension(vendorName = "datanucleus", key = "gae.encoded-pk", value = "true")
+	private String id;
 
 	@Persistent
 	private Date cadastro;
@@ -36,13 +38,16 @@ public class Emprestimo implements IsSerializable {
 	private Date entrega;
 
 	@Persistent
+	private Midia midia;
+
+	@Persistent
 	private Membro membro;
 
 	public Emprestimo() {
 		this.cadastro = new Date();
 	}
 
-	public Long getId() {
+	public String getId() {
 		return this.id;
 	}
 
@@ -58,8 +63,8 @@ public class Emprestimo implements IsSerializable {
 		return this.reserva;
 	}
 
-	public void setReservadoPor(String reservadorpor) {
-		this.reservadopor = reservadorpor;
+	public void setReservadoPor(String reservadopor) {
+		this.reservadopor = reservadopor;
 	}
 
 	public String getReservadoPor() {
@@ -96,6 +101,14 @@ public class Emprestimo implements IsSerializable {
 
 	public Date getEntrega() {
 		return this.entrega;
+	}
+
+	public void setMidia(Midia midia) {
+		this.midia = midia;
+	}
+
+	public Midia getMidia() {
+		return this.midia;
 	}
 
 }

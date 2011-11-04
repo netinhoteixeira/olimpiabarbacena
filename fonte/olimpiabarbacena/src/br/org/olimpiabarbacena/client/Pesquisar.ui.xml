@@ -5,15 +5,19 @@
 		
 	</ui:style>
 	<g:HTMLPanel>
-		<g:AbsolutePanel height="300px">
+		<g:AbsolutePanel height="337px">
 			<g:at left="10" top="10">
-				<g:TextBox width="314px" height="16px" ui:field="textboxPesquisar"/>
+				<g:TextBox width="314px" height="16px" ui:field="textboxPesquisar" />
 			</g:at>
 			<g:at left="340" top="10">
 				<g:Button width="100px" height="32px" ui:field="buttonPesquisar">Pesquisar</g:Button>
 			</g:at>
 			<g:at left="10" top="48">
-				<p1:CellTable ui:field="cellTable" width="430px" height="242px"/>
+				<p1:CellTable ui:field="cellTable" width="430px"
+					height="242px" />
+			</g:at>
+			<g:at left="155" top="296">
+				<p1:SimplePager location="CENTER" ui:field="simplePager" />
 			</g:at>
 		</g:AbsolutePanel>
 	</g:HTMLPanel>

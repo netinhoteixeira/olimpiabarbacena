@@ -2,6 +2,7 @@ package br.org.olimpiabarbacena.shared.dados;
 
 import java.util.Date;
 
+import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
@@ -15,7 +16,8 @@ public class Membro implements IsSerializable {
 
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	private Long id;
+	@Extension(vendorName = "datanucleus", key = "gae.encoded-pk", value = "true")
+	private String id;
 
 	@Persistent
 	private Date cadastro;
@@ -54,7 +56,7 @@ public class Membro implements IsSerializable {
 		this.cadastro = new Date();
 	}
 
-	public Long getId() {
+	public String getId() {
 		return this.id;
 	}
 

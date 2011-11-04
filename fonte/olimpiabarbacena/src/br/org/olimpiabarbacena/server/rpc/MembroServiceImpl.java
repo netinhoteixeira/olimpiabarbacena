@@ -9,6 +9,7 @@ import br.org.olimpiabarbacena.client.rpc.MembroService;
 import br.org.olimpiabarbacena.server.dados.PMF;
 import br.org.olimpiabarbacena.shared.dados.Membro;
 
+import javax.jdo.Query;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 @SuppressWarnings("serial")
@@ -16,7 +17,7 @@ public class MembroServiceImpl extends RemoteServiceServlet implements
 		MembroService {
 
 	@Override
-	public void salvar(Membro membro) {
+	public void salvar(Membro membro) throws IllegalArgumentException {
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		try {
 			pm.makePersistent(membro);
@@ -26,34 +27,50 @@ public class MembroServiceImpl extends RemoteServiceServlet implements
 	}
 
 	@Override
-	public void remover(Membro membro) {
+	public void remover(Membro membro) throws IllegalArgumentException {
 
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Membro> listar() {
+	public List<Membro> listar(String nome) {
+		nome = (nome == null) ? new String() : info.netinho.util.Text
+				.retirarAcentos(nome.trim()).toLowerCase();
 		List<Membro> membros = null;
 		List<Membro> result = new ArrayList<Membro>();
-		
+
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		try {
-			membros = (List<Membro>) pm.newQuery(Membro.class).execute();
-			// DONE: Fix bug "NucleusUserException: Object Manager has been closed"
+			Query query = pm.newQuery(Membro.class);
+			query.setOrdering("nome asc");
+			membros = (List<Membro>) query.execute();
+			// DONE: Fix bug
+			// "NucleusUserException: Object Manager has been closed"
 			membros.size();
 		} finally {
 			pm.close();
 		}
-		
+
 		// DONE: Tem que criar um novo objeto para retornar o resultado
 		if (membros != null) {
 			if (!membros.isEmpty()) {
-				for (Membro membro : membros) {
-					result.add(membro);
+				// simulação do LIKE
+				if (nome.length() > 0) {
+					for (Membro membro : membros) {
+						String _nome = info.netinho.util.Text.retirarAcentos(
+								membro.getNome().trim()).toLowerCase();
+						if (_nome.startsWith(nome)) {
+							result.add(membro);
+						}
+					}
+				} else {
+					for (Membro membro : membros) {
+						result.add(membro);
+					}
 				}
 			}
 		}
-		
+
 		return result;
 	}
 

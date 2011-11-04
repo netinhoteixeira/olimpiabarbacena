@@ -2,11 +2,11 @@ package br.org.olimpiabarbacena.client.formulario;
 
 import br.org.olimpiabarbacena.client.rpc.MembroService;
 import br.org.olimpiabarbacena.client.rpc.MembroServiceAsync;
+import br.org.olimpiabarbacena.shared.InputValidator;
 import br.org.olimpiabarbacena.shared.dados.Sexo;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyPressEvent;
 import com.google.gwt.event.dom.client.KeyPressHandler;
 import com.google.gwt.i18n.client.DateTimeFormat;
@@ -76,19 +76,8 @@ public class Membro extends Composite {
 
 			@Override
 			public void onKeyPress(KeyPressEvent event) {
-				if ((!Character.isDigit(event.getCharCode()))
-						&& (event.getCharCode() != (char) KeyCodes.KEY_TAB)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_BACKSPACE)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_DELETE)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_ENTER)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_HOME)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_END)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_LEFT)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_UP)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_RIGHT)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_DOWN)) {
+				if (!InputValidator.isInteger(event.getCharCode())) {
 					// TextBox.cancelKey() suppresses the current keyboard
-					// event.
 					((TextBox) event.getSource()).cancelKey();
 				}
 			}
@@ -99,24 +88,14 @@ public class Membro extends Composite {
 
 			@Override
 			public void onKeyPress(KeyPressEvent event) {
-				if ((!Character.isDigit(event.getCharCode()))
-						&& (event.getCharCode() != (char) KeyCodes.KEY_TAB)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_BACKSPACE)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_DELETE)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_ENTER)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_HOME)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_END)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_LEFT)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_UP)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_RIGHT)
-						&& (event.getCharCode() != (char) KeyCodes.KEY_DOWN)) {
+				if (!InputValidator.isInteger(event.getCharCode())) {
 					// TextBox.cancelKey() suppresses the current keyboard
-					// event.
 					((TextBox) event.getSource()).cancelKey();
 				}
+
 			}
 		});
-		
+
 		// adiciona a lista dos estados brasileiros
 		comboEstado.addItem("AC");
 		comboEstado.addItem("AL");
