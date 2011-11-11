@@ -15,6 +15,20 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 @SuppressWarnings("serial")
 public class MembroServiceImpl extends RemoteServiceServlet implements
 		MembroService {
+	
+	@Override
+	public Membro obter(String id) throws IllegalArgumentException {
+		Membro membro = new Membro();
+		
+		PersistenceManager pm = PMF.get().getPersistenceManager();
+		try {
+			membro = pm.getObjectById(Membro.class, id);
+		} finally {
+			pm.close();
+		}
+		
+		return membro;
+	}
 
 	@Override
 	public void salvar(Membro membro) throws IllegalArgumentException {
@@ -27,8 +41,18 @@ public class MembroServiceImpl extends RemoteServiceServlet implements
 	}
 
 	@Override
-	public void remover(Membro membro) throws IllegalArgumentException {
-
+	public void remover(String id) throws IllegalArgumentException {
+		Membro membro = new Membro();
+		
+		PersistenceManager pm = PMF.get().getPersistenceManager();
+		try {
+			membro = pm.getObjectById(Membro.class, id);
+			if (membro != null) {
+				pm.deletePersistent(membro);
+			}
+		} finally {
+			pm.close();
+		}
 	}
 
 	@SuppressWarnings("unchecked")

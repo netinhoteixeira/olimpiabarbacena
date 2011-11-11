@@ -4,10 +4,10 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.RootPanel;
 
 public class Principal implements EntryPoint {
-
-	Menu menu;
-	Pesquisar pesquisar;
-	Controle controle;
+	
+	private Menu menu;
+	private Pesquisar pesquisar;
+	private Controle controle;
 
 	@Override
 	public void onModuleLoad() {

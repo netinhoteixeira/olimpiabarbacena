@@ -8,7 +8,6 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.History;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Hyperlink;
 import com.google.gwt.user.client.ui.Widget;
@@ -20,8 +19,8 @@ public class Menu extends Composite {
 	Hyperlink linkAcervo;
 	@UiField
 	Hyperlink linkMembro;
-	public Pesquisa selecionado;
-	Principal principal;
+	private Pesquisa selecionado;
+	private Principal principal;
 
 	interface MenuUiBinder extends UiBinder<Widget, Menu> {
 	}
@@ -43,16 +42,21 @@ public class Menu extends Composite {
 		// Now that we've setup our listener, fire the initial history state.
 		History.fireCurrentHistoryState();
 	}
+	
+	public Pesquisa getSelecionado() {
+		return this.selecionado;
+	}
 
 	@UiHandler("linkAcervo")
-	void onLinkAcervoClick(ClickEvent event) {
+	public void onLinkAcervoClick(ClickEvent event) {
 		this.selecionado = Pesquisa.ACERVO;
 		this.principal.getPesquisar().listarAcervo();
 	}
 
 	@UiHandler("linkMembro")
-	void onLinkMembroClick(ClickEvent event) {
+	public void onLinkMembroClick(ClickEvent event) {
 		this.selecionado = Pesquisa.MEMBRO;
+		this.principal.getPesquisar().textboxPesquisar.setText(new String());
 		this.principal.getPesquisar().listarMembro();
 	}
 }

@@ -1,5 +1,6 @@
 package br.org.olimpiabarbacena.client.formulario;
 
+import br.org.olimpiabarbacena.client.Principal;
 import br.org.olimpiabarbacena.client.rpc.MembroService;
 import br.org.olimpiabarbacena.client.rpc.MembroServiceAsync;
 import br.org.olimpiabarbacena.shared.InputValidator;
@@ -13,6 +14,7 @@ import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
@@ -22,10 +24,13 @@ import com.google.gwt.user.client.ui.RadioButton;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.datepicker.client.DateBox;
+import com.google.gwt.user.client.ui.Hidden;
 
 public class Membro extends Composite {
 
 	private static MembroUiBinder uiBinder = GWT.create(MembroUiBinder.class);
+	@UiField
+	Hidden hiddenId;
 	@UiField
 	TextBox textboxNome;
 	@UiField
@@ -56,6 +61,7 @@ public class Membro extends Composite {
 	public Button buttonSalvar;
 	@UiField
 	public Button buttonFechar;
+	Principal principal;	
 	DialogBox dialogo;
 
 	private final MembroServiceAsync membroService = GWT
@@ -64,7 +70,8 @@ public class Membro extends Composite {
 	interface MembroUiBinder extends UiBinder<Widget, Membro> {
 	}
 
-	public Membro(DialogBox dialogo) {
+	public Membro(Principal principal, DialogBox dialogo) {
+		this.principal = principal;
 		this.dialogo = dialogo;
 		initWidget(uiBinder.createAndBindUi(this));
 
@@ -126,9 +133,54 @@ public class Membro extends Composite {
 		comboEstado.addItem("TO");
 	}
 
+	public void get(String id) {
+		membroService
+				.obter(id,
+						new AsyncCallback<br.org.olimpiabarbacena.shared.dados.Membro>() {
+							@Override
+							public void onFailure(Throwable caught) {
+								Window.alert(caught.getMessage());
+							}
+							
+							@Override
+							public void onSuccess(
+									br.org.olimpiabarbacena.shared.dados.Membro membro) {
+								if (membro != null) {
+									hiddenId.setValue(membro.getId());
+									textboxNome.setText(membro.getNome());
+									dateboxNascimento.setValue(membro
+											.getNascimento());
+									switch (membro.getSexo().ordinal()) {
+									case 0: // Sexo.MASCULINO
+										radioSexoMasculino.setValue(true);
+										radioSexoFeminino.setValue(false);
+										break;
+									case 1: // Sexo.FEMININO
+										radioSexoMasculino.setValue(false);
+										radioSexoFeminino.setValue(true);
+										break;
+									}
+									textboxCPF.setValue(membro.getCPF());
+									textboxTelefone.setValue(membro.getTelefone());
+									textboxEmail.setValue(membro.getEmail());
+									textboxEndereco.setValue(membro.getEndereco());
+									textboxCidade.setValue(membro.getCidade());
+									for (int index = 0; index < comboEstado.getItemCount(); index++) {
+										if (comboEstado.getItemText(index).equals(membro.getEstado())) {
+											comboEstado.setSelectedIndex(index);
+											break;
+										}
+									}
+									textboxCEP.setValue(membro.getCEP());
+								}
+							}
+						});
+	}
+
 	@UiHandler("buttonSalvar")
 	void onButtonSalvarClick(ClickEvent event) {
 		br.org.olimpiabarbacena.shared.dados.Membro membro = new br.org.olimpiabarbacena.shared.dados.Membro();
+		membro.setId(hiddenId.getValue());
 		membro.setNome(textboxNome.getText());
 		membro.setNascimento(dateboxNascimento.getValue());
 		if (radioSexoMasculino.getValue()) {
@@ -152,8 +204,9 @@ public class Membro extends Composite {
 
 			@Override
 			public void onSuccess(Void result) {
-				// TODO Auto-generated method stub
-
+				principal.getPesquisar().limpar();
+				principal.getPesquisar().listarMembro();
+				dialogo.hide();
 			}
 		});
 	}
@@ -162,4 +215,5 @@ public class Membro extends Composite {
 	void onButtonFecharClick(ClickEvent event) {
 		dialogo.hide();
 	}
+
 }

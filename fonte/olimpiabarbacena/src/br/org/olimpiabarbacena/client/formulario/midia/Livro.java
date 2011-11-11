@@ -1,13 +1,21 @@
 package br.org.olimpiabarbacena.client.formulario.midia;
 
+import br.org.olimpiabarbacena.client.Principal;
+import br.org.olimpiabarbacena.client.rpc.MidiaService;
+import br.org.olimpiabarbacena.client.rpc.MidiaServiceAsync;
+import br.org.olimpiabarbacena.shared.dados.Tipo;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.Hidden;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.TextBox;
@@ -17,19 +25,17 @@ public class Livro extends Composite {
 
 	private static CDUiBinder uiBinder = GWT.create(CDUiBinder.class);
 	@UiField
+	Hidden hiddenId;
+	@UiField
 	Button buttonSalvar;
 	@UiField
 	TextBox textboxTitulo;
 	@UiField
-	Button buttonRemover;
+	public Button buttonFechar;
 	@UiField
-	Button buttonDevolucao;
+	public Button buttonReservar;
 	@UiField
-	Button buttonFechar;
-	@UiField
-	Button buttonReservar;
-	@UiField
-	Button buttonEmprestimo;
+	public Button buttonEmprestimo;
 	@UiField
 	TextBox textboxAutor;
 	@UiField
@@ -50,26 +56,65 @@ public class Livro extends Composite {
 	TextBox textboxMARC;
 	@UiField
 	TextArea textareaDescricao;
+	Principal principal;	
 	DialogBox dialogo;
+
+	private final MidiaServiceAsync midiaService = GWT
+			.create(MidiaService.class);
 
 	interface CDUiBinder extends UiBinder<Widget, Livro> {
 	}
 
-	public Livro(DialogBox dialogo) {
+	public Livro(Principal principal, DialogBox dialogo) {
+		this.principal = principal;
 		this.dialogo = dialogo;
 		initWidget(uiBinder.createAndBindUi(this));
+	}
+	
+
+	public void get(String id) {
+		midiaService
+				.obter(id,
+						new AsyncCallback<br.org.olimpiabarbacena.shared.dados.Midia>() {
+							@Override
+							public void onFailure(Throwable caught) {
+								Window.alert(caught.getMessage());
+							}
+							
+							@Override
+							public void onSuccess(
+									br.org.olimpiabarbacena.shared.dados.Midia midia) {
+								if (midia != null) {
+									hiddenId.setValue(midia.getId());
+									textboxTitulo.setValue(midia.getTitulo());
+									textboxAutor.setValue(midia.getAutor());
+								}
+							}
+						});
 	}
 
 	@UiHandler("buttonSalvar")
 	void onButtonSalvarClick(ClickEvent event) {
-	}
+		br.org.olimpiabarbacena.shared.dados.Midia midia = new br.org.olimpiabarbacena.shared.dados.Midia();
+		
+		midia.setId(hiddenId.getValue());
+		midia.setTitulo(textboxTitulo.getText());
+		midia.setAutor(textboxAutor.getText());
+		midia.setTipo(Tipo.LIVRO);
+		
+		midiaService.salvar(midia, new AsyncCallback<Void>() {
+			@Override
+			public void onFailure(Throwable caught) {
 
-	@UiHandler("buttonRemover")
-	void onButtonRemoverClick(ClickEvent event) {
-	}
+			}
 
-	@UiHandler("buttonDevolucao")
-	void onButtonDevolucaoClick(ClickEvent event) {
+			@Override
+			public void onSuccess(Void result) {
+				principal.getPesquisar().limpar();
+				principal.getPesquisar().listarAcervo();
+				dialogo.hide();
+			}
+		});
 	}
 
 	@UiHandler("buttonFechar")

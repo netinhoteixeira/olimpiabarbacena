@@ -56,6 +56,12 @@ public class Membro implements IsSerializable {
 		this.cadastro = new Date();
 	}
 
+	public void setId(String id) {
+		if ((id != null) && (!id.isEmpty())) {
+			this.id = id;
+		}
+	}
+
 	public String getId() {
 		return this.id;
 	}

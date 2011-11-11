@@ -37,10 +37,10 @@ public class Emprestimo implements IsSerializable {
 	@Persistent
 	private Date entrega;
 
-	@Persistent
+	@Persistent(dependent = "true")
 	private Midia midia;
 
-	@Persistent
+	@Persistent(dependent = "true")
 	private Membro membro;
 
 	public Emprestimo() {

@@ -26,12 +26,12 @@ public class Controle extends Composite {
 	Button buttonMidia;
 	@UiField
 	Button buttonMembro;
-	DialogBox dialogo;
-	Livro livro;
-	CD CD;
-	Jornal jornal;
-	Membro membro;
-	Principal principal;
+	private DialogBox dialogo;
+	private Livro livro;
+	private CD CD;
+	private Jornal jornal;
+	private Membro membro;
+	private Principal principal;
 
 	interface ControleUiBinder extends UiBinder<Widget, Controle> {
 	}
@@ -40,13 +40,29 @@ public class Controle extends Composite {
 		this.principal = principal;
 		initWidget(uiBinder.createAndBindUi(this));
 
-		// adicionar tipos de mídia
+		// adicionar tipos de mÃ­dia
 		comboMidia.addItem("Selecione", "");
 		comboMidia.addItem("CD", "CD");
 		comboMidia.addItem("DVD", "DVD");
 		comboMidia.addItem("Jornal", "JORNAL");
 		comboMidia.addItem("Livro", "LIVRO");
 		comboMidia.addItem("Revista", "REVISTA");
+	}
+	
+	public DialogBox getDialogo() {
+		return this.dialogo;
+	}
+	
+	public void setDialogo(DialogBox dialogo) {
+		this.dialogo = dialogo;
+	}
+	
+	public Livro getLivro() {
+		return this.livro;
+	}
+	
+	public void setLivro(Livro livro) {
+		this.livro = livro;
 	}
 
 	@UiHandler("buttonMidia")
@@ -55,10 +71,14 @@ public class Controle extends Composite {
 
 		if (value.equals("LIVRO")) {
 			dialogo = new DialogBox(false);
-			dialogo.setWidth("686px");
+			dialogo.setWidth("464px");
 			dialogo.setHeight("417px");
 
-			livro = new Livro(dialogo);
+			livro = new Livro(principal, dialogo);
+			livro.buttonEmprestimo.setVisible(false);
+			livro.buttonReservar.setVisible(false);
+			livro.buttonFechar.setText("Cancelar");
+			
 			dialogo.setWidget(livro);
 			dialogo.center();
 		} else if (value.equals("CD") || value.equals("DVD")) {
@@ -86,7 +106,7 @@ public class Controle extends Composite {
 		dialogo.setWidth("458px");
 		dialogo.setHeight("283px");
 
-		membro = new Membro(dialogo);
+		membro = new Membro(principal, dialogo);
 		membro.buttonHistorico.setVisible(false);
 		membro.buttonExcluir.setVisible(false);
 		membro.buttonFechar.setText("Cancelar");
