@@ -18,29 +18,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
+import javax.jdo.Query;
 
 import br.org.olimpiabarbacena.client.rpc.MembroService;
 import br.org.olimpiabarbacena.server.dados.PMF;
 import br.org.olimpiabarbacena.shared.dados.Membro;
 
-import javax.jdo.Query;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 @SuppressWarnings("serial")
 public class MembroServiceImpl extends RemoteServiceServlet implements
 		MembroService {
-	
+
 	@Override
 	public Membro obter(String id) throws IllegalArgumentException {
 		Membro membro = new Membro();
-		
+
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		try {
 			membro = pm.getObjectById(Membro.class, id);
 		} finally {
 			pm.close();
 		}
-		
+
 		return membro;
 	}
 
@@ -57,7 +57,7 @@ public class MembroServiceImpl extends RemoteServiceServlet implements
 	@Override
 	public void remover(String id) throws IllegalArgumentException {
 		Membro membro = new Membro();
-		
+
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		try {
 			membro = pm.getObjectById(Membro.class, id);

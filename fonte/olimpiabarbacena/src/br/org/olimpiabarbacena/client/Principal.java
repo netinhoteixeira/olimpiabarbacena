@@ -18,7 +18,7 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.RootPanel;
 
 public class Principal implements EntryPoint {
-	
+
 	private Menu menu;
 	private Pesquisar pesquisar;
 	private Controle controle;
@@ -27,9 +27,11 @@ public class Principal implements EntryPoint {
 	public void onModuleLoad() {
 		this.pesquisar = new Pesquisar(this);
 		// FIX: Caused by: java.lang.NullPointerException
-		// at br.org.olimpiabarbacena.client.Menu.onLinkAcervoClick(Menu.java:50)
+		// at
+		// br.org.olimpiabarbacena.client.Menu.onLinkAcervoClick(Menu.java:50)
 		// at br.org.olimpiabarbacena.client.Menu.(Menu.java:38)
-		// at br.org.olimpiabarbacena.client.Principal.onModuleLoad(Principal.java:14)
+		// at
+		// br.org.olimpiabarbacena.client.Principal.onModuleLoad(Principal.java:14)
 		// ... 9 more
 		this.menu = new Menu(this);
 		this.controle = new Controle(this);

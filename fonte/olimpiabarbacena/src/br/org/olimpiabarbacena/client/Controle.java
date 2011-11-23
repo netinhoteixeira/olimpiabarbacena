@@ -18,6 +18,7 @@ import br.org.olimpiabarbacena.client.formulario.Membro;
 import br.org.olimpiabarbacena.client.formulario.midia.CD;
 import br.org.olimpiabarbacena.client.formulario.midia.Jornal;
 import br.org.olimpiabarbacena.client.formulario.midia.Livro;
+import br.org.olimpiabarbacena.shared.dados.Tipo;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -42,7 +43,7 @@ public class Controle extends Composite {
 	Button buttonMembro;
 	private DialogBox dialogo;
 	private Livro livro;
-	private CD CD;
+	private CD cd;
 	private Jornal jornal;
 	private Membro membro;
 	private Principal principal;
@@ -62,21 +63,37 @@ public class Controle extends Composite {
 		comboMidia.addItem("Livro", "LIVRO");
 		comboMidia.addItem("Revista", "REVISTA");
 	}
-	
+
 	public DialogBox getDialogo() {
 		return this.dialogo;
 	}
-	
+
 	public void setDialogo(DialogBox dialogo) {
 		this.dialogo = dialogo;
 	}
-	
+
 	public Livro getLivro() {
 		return this.livro;
 	}
-	
+
 	public void setLivro(Livro livro) {
 		this.livro = livro;
+	}
+	
+	public CD getCD() {
+		return this.cd;
+	}
+
+	public void setCD(CD cd) {
+		this.cd = cd;
+	}
+	
+	public Jornal getJornal() {
+		return this.jornal;
+	}
+
+	public void setJornal(Jornal jornal) {
+		this.jornal = jornal;
 	}
 
 	@UiHandler("buttonMidia")
@@ -89,26 +106,36 @@ public class Controle extends Composite {
 			dialogo.setHeight("417px");
 
 			livro = new Livro(principal, dialogo);
-			livro.buttonEmprestimo.setVisible(false);
+			livro.buttonEmprestar.setVisible(false);
 			livro.buttonReservar.setVisible(false);
 			livro.buttonFechar.setText("Cancelar");
-			
+
 			dialogo.setWidget(livro);
 			dialogo.center();
 		} else if (value.equals("CD") || value.equals("DVD")) {
 			dialogo = new DialogBox(false);
-			dialogo.setWidth("686px");
-			dialogo.setHeight("260px");
+			dialogo.setWidth("462px");
+			dialogo.setHeight("261px");
 
-			CD = new CD(dialogo);
-			dialogo.setWidget(CD);
+			cd = new CD(principal, dialogo, (value.equals("CD") ? Tipo.CD
+					: Tipo.DVD));
+			cd.buttonEmprestar.setVisible(false);
+			cd.buttonReservar.setVisible(false);
+			cd.buttonFechar.setText("Cancelar");
+			
+			dialogo.setWidget(cd);
 			dialogo.center();
 		} else if (value.equals("JORNAL") || value.equals("REVISTA")) {
 			dialogo = new DialogBox(false);
-			dialogo.setWidth("686px");
-			dialogo.setHeight("360px");
+			dialogo.setWidth("460px");
+			dialogo.setHeight("359px");
 
-			jornal = new Jornal(dialogo);
+			jornal = new Jornal(principal, dialogo,
+					(value.equals("JORNAL") ? Tipo.JORNAL : Tipo.REVISTA));
+			jornal.buttonEmprestar.setVisible(false);
+			jornal.buttonReservar.setVisible(false);
+			jornal.buttonFechar.setText("Cancelar");
+			
 			dialogo.setWidget(jornal);
 			dialogo.center();
 		}
@@ -117,8 +144,8 @@ public class Controle extends Composite {
 	@UiHandler("buttonMembro")
 	void onButtonMembroClick(ClickEvent event) {
 		dialogo = new DialogBox(false);
-		dialogo.setWidth("458px");
-		dialogo.setHeight("283px");
+		dialogo.setWidth("466px");
+		dialogo.setHeight("319px");
 
 		membro = new Membro(principal, dialogo);
 		membro.buttonHistorico.setVisible(false);

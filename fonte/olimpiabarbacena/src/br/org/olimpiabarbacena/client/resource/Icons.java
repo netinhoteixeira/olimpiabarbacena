@@ -19,13 +19,31 @@ import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.ImageResource;
 
 public interface Icons extends ClientBundle {
-	
+
 	public static final Icons INSTANCE = GWT.create(Icons.class);
+
+	@Source("book.png")
+	ImageResource book();
+
+	@Source("cd.png")
+	ImageResource cd();
+
+	@Source("delete.png")
+	ImageResource delete();
+
+	@Source("dvd.png")
+	ImageResource dvd();
+
+	@Source("magazine.png")
+	ImageResource magazine();
+
+	@Source("newspaper.png")
+	ImageResource newspaper();
 
 	@Source("pencil.png")
 	ImageResource pencil();
 
-	@Source("delete.png")
-	ImageResource delete();
+	@Source("user.png")
+	ImageResource user();
 
 }

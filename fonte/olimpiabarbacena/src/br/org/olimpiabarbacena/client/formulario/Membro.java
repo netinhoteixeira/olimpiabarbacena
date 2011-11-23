@@ -33,12 +33,12 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.Hidden;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.RadioButton;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.datepicker.client.DateBox;
-import com.google.gwt.user.client.ui.Hidden;
 
 public class Membro extends Composite {
 
@@ -75,7 +75,7 @@ public class Membro extends Composite {
 	public Button buttonSalvar;
 	@UiField
 	public Button buttonFechar;
-	Principal principal;	
+	Principal principal;
 	DialogBox dialogo;
 
 	private final MembroServiceAsync membroService = GWT
@@ -155,7 +155,7 @@ public class Membro extends Composite {
 							public void onFailure(Throwable caught) {
 								Window.alert(caught.getMessage());
 							}
-							
+
 							@Override
 							public void onSuccess(
 									br.org.olimpiabarbacena.shared.dados.Membro membro) {
@@ -175,12 +175,16 @@ public class Membro extends Composite {
 										break;
 									}
 									textboxCPF.setValue(membro.getCPF());
-									textboxTelefone.setValue(membro.getTelefone());
+									textboxTelefone.setValue(membro
+											.getTelefone());
 									textboxEmail.setValue(membro.getEmail());
-									textboxEndereco.setValue(membro.getEndereco());
+									textboxEndereco.setValue(membro
+											.getEndereco());
 									textboxCidade.setValue(membro.getCidade());
-									for (int index = 0; index < comboEstado.getItemCount(); index++) {
-										if (comboEstado.getItemText(index).equals(membro.getEstado())) {
+									for (int index = 0; index < comboEstado
+											.getItemCount(); index++) {
+										if (comboEstado.getItemText(index)
+												.equals(membro.getEstado())) {
 											comboEstado.setSelectedIndex(index);
 											break;
 										}

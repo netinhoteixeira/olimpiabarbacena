@@ -37,19 +37,13 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class Livro extends Composite {
 
+	private Principal principal;
+	private DialogBox dialogo;
 	private static CDUiBinder uiBinder = GWT.create(CDUiBinder.class);
 	@UiField
 	Hidden hiddenId;
 	@UiField
-	Button buttonSalvar;
-	@UiField
 	TextBox textboxTitulo;
-	@UiField
-	public Button buttonFechar;
-	@UiField
-	public Button buttonReservar;
-	@UiField
-	public Button buttonEmprestimo;
 	@UiField
 	TextBox textboxAutor;
 	@UiField
@@ -59,10 +53,6 @@ public class Livro extends Composite {
 	@UiField
 	TextBox textboxLocalidade;
 	@UiField
-	ListBox listboxIdioma;
-	@UiField
-	ListBox listboxCategoria;
-	@UiField
 	TextBox textboxCondicao;
 	@UiField
 	TextBox textboxISBN;
@@ -70,8 +60,18 @@ public class Livro extends Composite {
 	TextBox textboxMARC;
 	@UiField
 	TextArea textareaDescricao;
-	Principal principal;	
-	DialogBox dialogo;
+	@UiField
+	ListBox listboxIdioma;
+	@UiField
+	ListBox listboxCategoria;
+	@UiField
+	public Button buttonEmprestar;
+	@UiField
+	public Button buttonReservar;
+	@UiField
+	Button buttonSalvar;
+	@UiField
+	public Button buttonFechar;
 
 	private final MidiaServiceAsync midiaService = GWT
 			.create(MidiaService.class);
@@ -84,7 +84,6 @@ public class Livro extends Composite {
 		this.dialogo = dialogo;
 		initWidget(uiBinder.createAndBindUi(this));
 	}
-	
 
 	public void get(String id) {
 		midiaService
@@ -94,7 +93,7 @@ public class Livro extends Composite {
 							public void onFailure(Throwable caught) {
 								Window.alert(caught.getMessage());
 							}
-							
+
 							@Override
 							public void onSuccess(
 									br.org.olimpiabarbacena.shared.dados.Midia midia) {
@@ -102,6 +101,18 @@ public class Livro extends Composite {
 									hiddenId.setValue(midia.getId());
 									textboxTitulo.setValue(midia.getTitulo());
 									textboxAutor.setValue(midia.getAutor());
+									textboxEditora.setValue(midia.getEditora());
+									textboxEdicao.setValue(midia.getEdicao());
+									textboxLocalidade.setValue(midia
+											.getLocalidade());
+									textboxCondicao.setValue(midia
+											.getCondicao());
+									textboxISBN.setValue(midia.getISBN13());
+									textboxMARC.setValue(midia.getMARC());
+									textareaDescricao.setValue(midia
+											.getDescricao());
+									// ListBox listboxIdioma;
+									// ListBox listboxCategoria;
 								}
 							}
 						});
@@ -110,12 +121,21 @@ public class Livro extends Composite {
 	@UiHandler("buttonSalvar")
 	void onButtonSalvarClick(ClickEvent event) {
 		br.org.olimpiabarbacena.shared.dados.Midia midia = new br.org.olimpiabarbacena.shared.dados.Midia();
-		
+
 		midia.setId(hiddenId.getValue());
 		midia.setTitulo(textboxTitulo.getText());
 		midia.setAutor(textboxAutor.getText());
+		midia.setEditora(textboxEditora.getValue());
+		midia.setEdicao(textboxEdicao.getValue());
+		midia.setLocalidade(textboxLocalidade.getValue());
+		midia.setCondicao(textboxCondicao.getValue());
+		midia.setISBN13(textboxISBN.getValue());
+		midia.setMARC(textboxMARC.getValue());
+		midia.setDescricao(textareaDescricao.getValue());
+		// ListBox listboxIdioma;
+		// ListBox listboxCategoria;
 		midia.setTipo(Tipo.LIVRO);
-		
+
 		midiaService.salvar(midia, new AsyncCallback<Void>() {
 			@Override
 			public void onFailure(Throwable caught) {

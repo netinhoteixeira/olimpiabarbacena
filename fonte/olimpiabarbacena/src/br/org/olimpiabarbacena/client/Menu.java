@@ -46,7 +46,7 @@ public class Menu extends Composite {
 		// If the application starts with no history token, redirect to a new
 		// 'acervo' state.
 		String initToken = History.getToken();
-		if ((initToken.length() == 0)||(initToken.equals("acervo"))) {
+		if ((initToken.length() == 0) || (initToken.equals("acervo"))) {
 			History.newItem("acervo");
 			onLinkAcervoClick(null);
 		} else if (initToken.equals("membro")) {
@@ -56,7 +56,7 @@ public class Menu extends Composite {
 		// Now that we've setup our listener, fire the initial history state.
 		History.fireCurrentHistoryState();
 	}
-	
+
 	public Pesquisa getSelecionado() {
 		return this.selecionado;
 	}

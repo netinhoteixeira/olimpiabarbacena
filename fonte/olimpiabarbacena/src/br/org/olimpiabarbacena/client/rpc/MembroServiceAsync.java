@@ -21,9 +21,9 @@ import br.org.olimpiabarbacena.shared.dados.Membro;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 public interface MembroServiceAsync {
-	
+
 	void obter(String id, AsyncCallback<Membro> callback)
-		throws IllegalArgumentException;
+			throws IllegalArgumentException;
 
 	void salvar(Membro membro, AsyncCallback<Void> callback)
 			throws IllegalArgumentException;

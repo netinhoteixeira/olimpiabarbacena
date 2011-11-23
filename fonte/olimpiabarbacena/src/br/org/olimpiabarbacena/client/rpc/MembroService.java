@@ -23,7 +23,7 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
 @RemoteServiceRelativePath("../rpc/membro")
 public interface MembroService extends RemoteService {
-	
+
 	public Membro obter(String id) throws IllegalArgumentException;
 
 	public void salvar(Membro membro) throws IllegalArgumentException;

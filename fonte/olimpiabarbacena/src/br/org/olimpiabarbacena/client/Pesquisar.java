@@ -17,6 +17,9 @@ package br.org.olimpiabarbacena.client;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.org.olimpiabarbacena.client.formulario.midia.CD;
+import br.org.olimpiabarbacena.client.formulario.midia.Jornal;
+import br.org.olimpiabarbacena.client.formulario.midia.Livro;
 import br.org.olimpiabarbacena.client.resource.Icons;
 import br.org.olimpiabarbacena.client.rpc.MembroService;
 import br.org.olimpiabarbacena.client.rpc.MembroServiceAsync;
@@ -25,6 +28,7 @@ import br.org.olimpiabarbacena.client.rpc.MidiaServiceAsync;
 import br.org.olimpiabarbacena.shared.Pesquisa;
 import br.org.olimpiabarbacena.shared.dados.Membro;
 import br.org.olimpiabarbacena.shared.dados.Midia;
+import br.org.olimpiabarbacena.shared.dados.Tipo;
 
 import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.FieldUpdater;
@@ -137,26 +141,88 @@ public class Pesquisar extends Composite {
 
 				if (object.getClass().getName()
 						.equals("br.org.olimpiabarbacena.shared.dados.Midia")) {
-					principal.getControle().setDialogo(new DialogBox(false));
-
-					principal.getControle().getDialogo().setWidth("458px");
-					principal.getControle().getDialogo().setHeight("283px");
-
-					principal.getControle().setLivro(new br.org.olimpiabarbacena.client.formulario.midia.Livro(principal, principal.getControle().getDialogo()));
-					principal.getControle().getLivro().buttonEmprestimo.setVisible(false);
-					principal.getControle().getLivro().buttonReservar.setVisible(false);
-					principal.getControle().getLivro().buttonFechar.setText("Cancelar");
-
-					principal.getControle().getLivro().get(((Midia) object).getId());
-
-					principal.getControle().getDialogo().setWidget(principal.getControle().getLivro());
-					principal.getControle().getDialogo().center();
+					if (((Midia) object).getTipo() == Tipo.LIVRO) {
+						 principal.getControle().setDialogo(new DialogBox(false));
+						 
+						 principal.getControle().getDialogo().setWidth("464px");
+						 principal.getControle().getDialogo().setHeight("417px");
+						  
+						 principal .getControle().setLivro(new br.org.olimpiabarbacena.client.formulario.midia.Livro(principal, principal.getControle().getDialogo()));
+						 principal.getControle().getLivro().buttonReservar.setVisible(false);
+						 principal.getControle().getLivro().buttonEmprestar.setVisible(false);
+						 principal.getControle().getLivro().buttonFechar.setText("Cancelar");
+						  
+						 principal.getControle().getLivro().get(((Midia) object).getId());
+						  
+						 principal.getControle().getDialogo().setWidget(principal.getControle().getLivro());
+						 principal.getControle().getDialogo().center();
+					} else if (((Midia) object).getTipo() == Tipo.CD) {
+						 principal.getControle().setDialogo(new DialogBox(false));
+						 
+						 principal.getControle().getDialogo().setWidth("462px");
+						 principal.getControle().getDialogo().setHeight("261px");
+						  
+						 principal .getControle().setCD(new br.org.olimpiabarbacena.client.formulario.midia.CD(principal, principal.getControle().getDialogo(), Tipo.CD));
+						 principal.getControle().getCD().buttonReservar.setVisible(false);
+						 principal.getControle().getCD().buttonEmprestar.setVisible(false);
+						 principal.getControle().getCD().buttonFechar.setText("Cancelar");
+						  
+						 principal.getControle().getCD().get(((Midia) object).getId());
+						  
+						 principal.getControle().getDialogo().setWidget(principal.getControle().getCD());
+						 principal.getControle().getDialogo().center();
+					} else if (((Midia) object).getTipo() == Tipo.DVD) {
+						 principal.getControle().setDialogo(new DialogBox(false));
+						 
+						 principal.getControle().getDialogo().setWidth("462px");
+						 principal.getControle().getDialogo().setHeight("261px");
+						  
+						 principal .getControle().setCD(new br.org.olimpiabarbacena.client.formulario.midia.CD(principal, principal.getControle().getDialogo(), Tipo.DVD));
+						 principal.getControle().getCD().buttonReservar.setVisible(false);
+						 principal.getControle().getCD().buttonEmprestar.setVisible(false);
+						 principal.getControle().getCD().buttonFechar.setText("Cancelar");
+						  
+						 principal.getControle().getCD().get(((Midia) object).getId());
+						  
+						 principal.getControle().getDialogo().setWidget(principal.getControle().getCD());
+						 principal.getControle().getDialogo().center();
+					} else if (((Midia) object).getTipo() == Tipo.JORNAL) {
+						 principal.getControle().setDialogo(new DialogBox(false));
+						 
+						 principal.getControle().getDialogo().setWidth("460px");
+						 principal.getControle().getDialogo().setHeight("359px");
+						  
+						 principal .getControle().setJornal(new br.org.olimpiabarbacena.client.formulario.midia.Jornal(principal, principal.getControle().getDialogo(), Tipo.JORNAL));
+						 principal.getControle().getJornal().buttonReservar.setVisible(false);
+						 principal.getControle().getJornal().buttonEmprestar.setVisible(false);
+						 principal.getControle().getJornal().buttonFechar.setText("Cancelar");
+						  
+						 principal.getControle().getJornal().get(((Midia) object).getId());
+						  
+						 principal.getControle().getDialogo().setWidget(principal.getControle().getJornal());
+						 principal.getControle().getDialogo().center();
+					} else if (((Midia) object).getTipo() == Tipo.REVISTA) {
+						 principal.getControle().setDialogo(new DialogBox(false));
+						 
+						 principal.getControle().getDialogo().setWidth("460px");
+						 principal.getControle().getDialogo().setHeight("359px");
+						  
+						 principal .getControle().setJornal(new br.org.olimpiabarbacena.client.formulario.midia.Jornal(principal, principal.getControle().getDialogo(), Tipo.REVISTA));
+						 principal.getControle().getJornal().buttonReservar.setVisible(false);
+						 principal.getControle().getJornal().buttonEmprestar.setVisible(false);
+						 principal.getControle().getJornal().buttonFechar.setText("Cancelar");
+						  
+						 principal.getControle().getJornal().get(((Midia) object).getId());
+						  
+						 principal.getControle().getDialogo().setWidget(principal.getControle().getJornal());
+						 principal.getControle().getDialogo().center();
+					}
 				} else if (object.getClass().getName()
 						.equals("br.org.olimpiabarbacena.shared.dados.Membro")) {
 					principal.getControle().setDialogo(new DialogBox(false));
 
-					principal.getControle().getDialogo().setWidth("458px");
-					principal.getControle().getDialogo().setHeight("283px");
+					principal.getControle().getDialogo().setWidth("466px");
+					principal.getControle().getDialogo().setHeight("319px");
 
 					br.org.olimpiabarbacena.client.formulario.Membro membro = new br.org.olimpiabarbacena.client.formulario.Membro(
 							principal, principal.getControle().getDialogo());

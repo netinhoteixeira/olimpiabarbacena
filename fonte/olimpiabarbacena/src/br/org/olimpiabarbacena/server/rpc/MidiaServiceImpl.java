@@ -18,12 +18,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
+import javax.jdo.Query;
 
 import br.org.olimpiabarbacena.client.rpc.MidiaService;
 import br.org.olimpiabarbacena.server.dados.PMF;
 import br.org.olimpiabarbacena.shared.dados.Midia;
 
-import javax.jdo.Query;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 @SuppressWarnings("serial")

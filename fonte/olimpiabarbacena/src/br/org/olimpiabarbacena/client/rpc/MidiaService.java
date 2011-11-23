@@ -23,7 +23,7 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
 @RemoteServiceRelativePath("../rpc/midia")
 public interface MidiaService extends RemoteService {
-	
+
 	public Midia obter(String id) throws IllegalArgumentException;
 
 	public void salvar(Midia midia) throws IllegalArgumentException;

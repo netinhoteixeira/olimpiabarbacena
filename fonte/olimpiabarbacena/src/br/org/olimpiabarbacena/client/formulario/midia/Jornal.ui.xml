@@ -19,85 +19,82 @@ limitations under the License.
 	<ui:style>
 		
 	</ui:style>
-	<g:HTMLPanel width="686px" height="348px">
-		<g:AbsolutePanel height="360px" width="686px">
-			<g:at left="305" top="10">
-				<g:TextBox width="355px" height="16px" ui:field="textboxTitulo"/>
+	<g:HTMLPanel>
+		<g:AbsolutePanel height="359px" width="460px">
+			<g:at left="27" top="186">
+				<g:Hidden name="Hidden name" width="20px" height="20px" ui:field="hiddenId"/>
 			</g:at>
-			<g:at left="458" top="318">
-				<g:Button width="100px" height="32px" ui:field="buttonSalvar">Salvar</g:Button>
-			</g:at>
-			<g:at left="265" top="16">
+			<g:at left="41" top="10">
 				<g:Label text="Título"/>
 			</g:at>
-			<g:at left="255" top="58">
+			<g:at left="81" top="10">
+				<g:TextBox width="355px" height="16px" ui:field="textboxTitulo"/>
+			</g:at>
+			<g:at left="31" top="52">
 				<g:Label text="Editora"/>
 			</g:at>
-			<g:at left="234" top="100">
-				<g:Label text="Localidade"/>
-			</g:at>
-			<g:at left="258" top="283">
-				<g:Label text="Idioma"/>
-			</g:at>
-			<g:at left="518" top="58">
-				<g:Label text="Edição"/>
-			</g:at>
-			<g:at left="504" top="283">
-				<g:Label text="Categoria"/>
-			</g:at>
-			<g:at left="10" top="318">
-				<g:Button width="100px" height="32px" ui:field="buttonRemover" text="Remover"/>
-			</g:at>
-			<g:at left="570" top="318">
-				<g:Button width="100px" height="32px" ui:field="buttonFechar">Fechar</g:Button>
-			</g:at>
-			<g:at left="122" top="318">
-				<g:Button width="100px" height="32px" ui:field="buttonDevolucao" text="Devolução">Devolução</g:Button>
-			</g:at>
-			<g:at left="234" top="318">
-				<g:Button width="100px" height="32px" ui:field="buttonEmprestimo">Empréstimo</g:Button>
-			</g:at>
-			<g:at left="346" top="318">
-				<g:Button width="100px" height="32px" ui:field="buttonReservar">Reservar</g:Button>
-			</g:at>
-			<g:at left="305" top="52">
+			<g:at left="81" top="46">
 				<g:TextBox width="176" ui:field="textboxEditora"/>
 			</g:at>
-			<g:at left="569" top="53">
+			<g:at left="294" top="52">
+				<g:Label text="Edição"/>
+			</g:at>
+			<g:at left="345" top="47">
 				<g:TextBox width="91px" height="16px" ui:field="textboxEdicao"/>
 			</g:at>
-			<g:at left="305" top="94">
+			<g:at left="10" top="94">
+				<g:Label text="Localidade"/>
+			</g:at>
+			<g:at left="81" top="88">
 				<g:TextBox width="176" height="" ui:field="textboxLocalidade"/>
 			</g:at>
-			<g:at left="305" top="280">
-				<g:ListBox width="186px" height="22" ui:field="listboxIdioma"/>
-			</g:at>
-			<g:at left="570" top="280">
-				<g:ListBox width="100px" height="22" ui:field="listboxCategoria"/>
-			</g:at>
-			<g:at left="569" top="94">
-				<g:TextBox width="91px" height="16px" ui:field="textboxCondicao"/>
-			</g:at>
-			<g:at left="504" top="100">
+			<g:at left="280" top="94">
 				<g:Label width="40px" height="16px" text="Condição"/>
 			</g:at>
-			<g:at left="305" top="136">
-				<g:TextBox width="355px" height="16px" ui:field="textboxISSN"/>
+			<g:at left="345" top="88">
+				<g:TextBox width="91px" height="16px" ui:field="textboxCondicao"/>
 			</g:at>
-			<g:at left="305" top="176">
-				<g:TextBox width="355px" height="16px" ui:field="textboxMARC"/>
-			</g:at>
-			<g:at left="305" top="220">
-				<g:TextArea width="355px" height="32px" ui:field="textareaDescricao"/>
-			</g:at>
-			<g:at left="266" top="142">
+			<g:at left="42" top="136">
 				<g:Label text="ISSN"/>
 			</g:at>
-			<g:at left="258" top="182">
+			<g:at left="81" top="130">
+				<g:TextBox width="355px" height="16px" ui:field="textboxISSN"/>
+			</g:at>
+			<g:at left="34" top="176">
 				<g:Label text="MARC"/>
 			</g:at>
-			<g:at left="238" top="233">
+			<g:at left="81" top="170">
+				<g:TextBox width="355px" height="16px" ui:field="textboxMARC"/>
+			</g:at>
+			<g:at left="14" top="227">
 				<g:Label text="Descrição"/>
+			</g:at>
+			<g:at left="81" top="214">
+				<g:TextArea width="355px" height="32px" ui:field="textareaDescricao"/>
+			</g:at>
+			<g:at left="34" top="277">
+				<g:Label text="Idioma"/>
+			</g:at>
+			<g:at left="81" top="274">
+				<g:ListBox width="186px" height="22" ui:field="listboxIdioma"/>
+			</g:at>
+			<g:at left="280" top="277">
+				<g:Label text="Categoria"/>
+			</g:at>
+			<g:at left="346" top="274">
+				<g:ListBox width="100px" height="22" ui:field="listboxCategoria"/>
+			</g:at>
+			<g:at left="12" top="312">
+				<g:Button width="100px" height="32px" ui:field="buttonEmprestar" text="Emprestar">Empréstimo</g:Button>
+			</g:at>
+			<g:at left="124" top="312">
+				<g:Button width="100px" height="32px" ui:field="buttonReservar">Reservar</g:Button>
+			</g:at>
+			<g:at left="236" top="312">
+				<g:Button width="100px" height="32px" ui:field="buttonSalvar">Salvar</g:Button>
+			</g:at>
+			<g:at left="348" top="312">
+				<g:Button width="100px" height="32px" ui:field="buttonFechar">Fechar</g:Button>
 			</g:at>
 		</g:AbsolutePanel>
 	</g:HTMLPanel>
