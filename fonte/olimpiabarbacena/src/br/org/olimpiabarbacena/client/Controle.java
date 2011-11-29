@@ -79,7 +79,7 @@ public class Controle extends Composite {
 	public void setLivro(Livro livro) {
 		this.livro = livro;
 	}
-	
+
 	public CD getCD() {
 		return this.cd;
 	}
@@ -87,7 +87,7 @@ public class Controle extends Composite {
 	public void setCD(CD cd) {
 		this.cd = cd;
 	}
-	
+
 	public Jornal getJornal() {
 		return this.jornal;
 	}
@@ -107,7 +107,6 @@ public class Controle extends Composite {
 
 			livro = new Livro(principal, dialogo);
 			livro.buttonEmprestar.setVisible(false);
-			livro.buttonReservar.setVisible(false);
 			livro.buttonFechar.setText("Cancelar");
 
 			dialogo.setWidget(livro);
@@ -120,9 +119,8 @@ public class Controle extends Composite {
 			cd = new CD(principal, dialogo, (value.equals("CD") ? Tipo.CD
 					: Tipo.DVD));
 			cd.buttonEmprestar.setVisible(false);
-			cd.buttonReservar.setVisible(false);
 			cd.buttonFechar.setText("Cancelar");
-			
+
 			dialogo.setWidget(cd);
 			dialogo.center();
 		} else if (value.equals("JORNAL") || value.equals("REVISTA")) {
@@ -133,9 +131,8 @@ public class Controle extends Composite {
 			jornal = new Jornal(principal, dialogo,
 					(value.equals("JORNAL") ? Tipo.JORNAL : Tipo.REVISTA));
 			jornal.buttonEmprestar.setVisible(false);
-			jornal.buttonReservar.setVisible(false);
 			jornal.buttonFechar.setText("Cancelar");
-			
+
 			dialogo.setWidget(jornal);
 			dialogo.center();
 		}
@@ -149,7 +146,6 @@ public class Controle extends Composite {
 
 		membro = new Membro(principal, dialogo);
 		membro.buttonHistorico.setVisible(false);
-		membro.buttonExcluir.setVisible(false);
 		membro.buttonFechar.setText("Cancelar");
 
 		dialogo.setWidget(membro);

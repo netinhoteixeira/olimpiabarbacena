@@ -92,7 +92,7 @@ public class MembroServiceImpl extends RemoteServiceServlet implements
 		// DONE: Tem que criar um novo objeto para retornar o resultado
 		if (membros != null) {
 			if (!membros.isEmpty()) {
-				// simula��o do LIKE
+				// simulação do LIKE
 				if (nome.length() > 0) {
 					for (Membro membro : membros) {
 						String _nome = info.netinho.util.Text.retirarAcentos(

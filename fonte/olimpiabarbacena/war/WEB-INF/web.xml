@@ -39,6 +39,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-name>midiaServiceImpl</servlet-name>
 		<url-pattern>/rpc/midia</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>emprestimoServiceImpl</servlet-name>
+		<servlet-class>br.org.olimpiabarbacena.server.rpc.EmprestimoServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>emprestimoServiceImpl</servlet-name>
+		<url-pattern>/rpc/emprestimo</url-pattern>
+	</servlet-mapping>
 
 	<welcome-file-list>
 		<welcome-file>Principal.html</welcome-file>

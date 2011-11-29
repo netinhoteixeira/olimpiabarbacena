@@ -79,22 +79,19 @@ limitations under the License.
 				<g:TextArea width="355px" height="32px" ui:field="textareaDescricao"/>
 			</g:at>
 			<g:at left="38" top="325">
-				<g:Label text="Idioma"/>
+				<g:Label text="Idioma" ui:field="labelIdioma"/>
 			</g:at>
 			<g:at left="85" top="322">
 				<g:ListBox width="186px" height="22" ui:field="listboxIdioma"/>
 			</g:at>
 			<g:at left="284" top="325">
-				<g:Label text="Categoria"/>
+				<g:Label text="Categoria" ui:field="labelCategoria"/>
 			</g:at>
 			<g:at left="350" top="322">
 				<g:ListBox width="100px" height="22" ui:field="listboxCategoria"/>
 			</g:at>
 			<g:at left="12" top="373">
 				<g:Button width="100px" height="32px" ui:field="buttonEmprestar">Emprestar</g:Button>
-			</g:at>
-			<g:at left="124" top="373">
-				<g:Button width="100px" height="32px" ui:field="buttonReservar">Reservar</g:Button>
 			</g:at>
 			<g:at left="236" top="373">
 				<g:Button width="100px" height="32px" ui:field="buttonSalvar">Salvar</g:Button>

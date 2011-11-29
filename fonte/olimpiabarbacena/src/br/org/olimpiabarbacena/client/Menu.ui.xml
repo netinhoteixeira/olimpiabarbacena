@@ -19,12 +19,18 @@ limitations under the License.
 	<ui:style>
 	</ui:style>
 	<g:HTMLPanel>
-		<g:AbsolutePanel height="29px">
+		<g:AbsolutePanel height="100px">
 			<g:at left="10" top="10">
+				<g:Image width="431px" height="90px" url="olimpiabarbacena.png"/>
+			</g:at>
+			<g:at left="102" top="75">
 				<g:Hyperlink text="Acervo" targetHistoryToken="acervo" ui:field="linkAcervo"/>
 			</g:at>
-			<g:at left="58" top="10">
+			<g:at left="153" top="75">
 				<g:Hyperlink text="Membro" targetHistoryToken="membro" ui:field="linkMembro"/>
+			</g:at>
+			<g:at left="211" top="75">
+				<g:Hyperlink text="Empréstimo" targetHistoryToken="emprestimo" ui:field="linkEmprestimo"/>
 			</g:at>
 		</g:AbsolutePanel>
 	</g:HTMLPanel>

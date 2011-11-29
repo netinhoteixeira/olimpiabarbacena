@@ -23,27 +23,41 @@ public interface Icons extends ClientBundle {
 	public static final Icons INSTANCE = GWT.create(Icons.class);
 
 	@Source("book.png")
-	ImageResource book();
+	ImageResource livro();
 
 	@Source("cd.png")
 	ImageResource cd();
 
 	@Source("delete.png")
-	ImageResource delete();
+	ImageResource remover();
 
 	@Source("dvd.png")
 	ImageResource dvd();
 
-	@Source("magazine.png")
-	ImageResource magazine();
+	@Source("report.png")
+	ImageResource revista();
 
 	@Source("newspaper.png")
-	ImageResource newspaper();
+	ImageResource jornal();
 
 	@Source("pencil.png")
-	ImageResource pencil();
+	ImageResource editar();
 
-	@Source("user.png")
-	ImageResource user();
+	@Source("page_white.png")
+	ImageResource desconhecido();
 
+	@Source("arrow_down.png")
+	ImageResource baixado();
+
+	@Source("arrow_up_red.png")
+	ImageResource emprestado();
+
+	@Source("date.png")
+	ImageResource reservar();
+
+	@Source("tick.png")
+	ImageResource baixar();
+    
+    @Source("eye.png")
+    ImageResource visualizar();
 }

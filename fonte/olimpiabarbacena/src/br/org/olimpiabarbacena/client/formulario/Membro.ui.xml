@@ -90,9 +90,6 @@ limitations under the License.
 			<g:at left="13" top="272">
 				<g:Button width="100px" height="32px" ui:field="buttonHistorico">Histórico</g:Button>
 			</g:at>
-			<g:at left="126" top="272">
-				<g:Button width="100px" height="32px" ui:field="buttonExcluir">Excluir</g:Button>
-			</g:at>
 			<g:at left="239" top="272">
 				<g:Button width="100px" height="32px" ui:field="buttonSalvar">Salvar</g:Button>
 			</g:at>

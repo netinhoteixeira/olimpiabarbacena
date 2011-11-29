@@ -47,15 +47,23 @@ public class Emprestimo implements IsSerializable {
 
 	@Persistent
 	private Integer diasentrega;
+	
+	private Date previsao;
 
 	@Persistent
 	private Date entrega;
 
-	@Persistent(dependent = "true")
-	private Midia midia;
+	// @Persistent(dependent = "true")
+	// private Midia midia;
+	@Persistent
+	private String midia;
+	private Midia midiaobject;
 
-	@Persistent(dependent = "true")
-	private Membro membro;
+	// @Persistent(dependent = "true")
+	// private Membro membro;
+	@Persistent
+	private String membro;
+	private Membro membroobject;
 
 	public Emprestimo() {
 		this.cadastro = new Date();
@@ -93,12 +101,20 @@ public class Emprestimo implements IsSerializable {
 		return this.emprestimo;
 	}
 
-	public void setMembro(Membro membro) {
+	public void setMembro(String membro) {
 		this.membro = membro;
 	}
 
-	public Membro getMembro() {
+	public String getMembro() {
 		return this.membro;
+	}
+
+	public void setMembroObject(Membro membroobject) {
+		this.membroobject = membroobject;
+	}
+
+	public Membro getMembroObject() {
+		return this.membroobject;
 	}
 
 	public void setDiasEntrega(Integer diasentrega) {
@@ -117,12 +133,20 @@ public class Emprestimo implements IsSerializable {
 		return this.entrega;
 	}
 
-	public void setMidia(Midia midia) {
+	public void setMidia(String midia) {
 		this.midia = midia;
 	}
 
-	public Midia getMidia() {
+	public String getMidia() {
 		return this.midia;
+	}
+
+	public void setMidiaObject(Midia midiaobject) {
+		this.midiaobject = midiaobject;
+	}
+
+	public Midia getMidiaObject() {
+		return this.midiaobject;
 	}
 
 }

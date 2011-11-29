@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:AbsolutePanel height="124px" width="451px">
+			<g:at left="10" top="15">
+				<g:Label text="Emprestado para"/>
+			</g:at>
+			<g:at left="133" top="10">
+				<g:TextBox width="294px" height="18px" readOnly="true" ui:field="textboxEmprestadoPara"/>
+			</g:at>
+			<g:at left="10" top="54">
+				<g:Label text="Dias para entrega"/>
+			</g:at>
+			<g:at left="133" top="48">
+				<g:IntegerBox width="116px" height="16px" ui:field="integerboxPrevisao" readOnly="true"/>
+			</g:at>
+			<g:at left="10" top="88">
+				<g:Label text="Entrega em"/>
+			</g:at>
+			<g:at left="133" top="82">
+				<p1:DateBox width="116px" height="16px" ui:field="dateboxEntrega" enabled="false"/>
+			</g:at>
+			<g:at left="381" top="82">
+				<g:Button ui:field="buttonFechar">Fechar</g:Button>
+			</g:at>
+		</g:AbsolutePanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -17,6 +17,7 @@ package br.org.olimpiabarbacena.client.formulario.midia;
 import br.org.olimpiabarbacena.client.Principal;
 import br.org.olimpiabarbacena.client.rpc.MidiaService;
 import br.org.olimpiabarbacena.client.rpc.MidiaServiceAsync;
+import br.org.olimpiabarbacena.shared.dados.Midia;
 import br.org.olimpiabarbacena.shared.dados.Tipo;
 
 import com.google.gwt.core.client.GWT;
@@ -30,15 +31,33 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.Hidden;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 
+/**
+ * <p>
+ * Este &eacute; o formul&aacute;rio para inser&ccedil;&atilde;o e
+ * edi&ccedil;&atilde;o de Livro.
+ * </p>
+ * <p>
+ * Esta classe est&aacute; no pacote <code>formulario</code> porque &eacute;
+ * onde se encontram todos os formul&aacute;rios do cliente. No cliente,
+ * n&oacute;s permitimos o fornecimento de informa&ccedil;&otilde;es para serem
+ * enviados por uma requisi&ccedil;&atilde;o RPC. No servidor, n&oacute;s
+ * inserimos os dados fornecidos caso n&atilde;o possua uma
+ * identifica&ccedil;&atilde;o ou salvamos caso exista uma
+ * identifica&ccedil;&atilde;o.
+ * </p>
+ */
 public class Livro extends Composite {
 
 	private Principal principal;
 	private DialogBox dialogo;
+	private Midia livro;
+	private DialogBox dialogoEmprestar;
 	private static CDUiBinder uiBinder = GWT.create(CDUiBinder.class);
 	@UiField
 	Hidden hiddenId;
@@ -61,13 +80,15 @@ public class Livro extends Composite {
 	@UiField
 	TextArea textareaDescricao;
 	@UiField
+	Label labelIdioma;
+	@UiField
 	ListBox listboxIdioma;
+	@UiField
+	Label labelCategoria;
 	@UiField
 	ListBox listboxCategoria;
 	@UiField
 	public Button buttonEmprestar;
-	@UiField
-	public Button buttonReservar;
 	@UiField
 	Button buttonSalvar;
 	@UiField
@@ -83,6 +104,11 @@ public class Livro extends Composite {
 		this.principal = principal;
 		this.dialogo = dialogo;
 		initWidget(uiBinder.createAndBindUi(this));
+
+		labelIdioma.setVisible(false);
+		listboxIdioma.setVisible(false);
+		labelCategoria.setVisible(false);
+		listboxCategoria.setVisible(false);
 	}
 
 	public void get(String id) {
@@ -98,6 +124,7 @@ public class Livro extends Composite {
 							public void onSuccess(
 									br.org.olimpiabarbacena.shared.dados.Midia midia) {
 								if (midia != null) {
+									livro = midia;
 									hiddenId.setValue(midia.getId());
 									textboxTitulo.setValue(midia.getTitulo());
 									textboxAutor.setValue(midia.getAutor());
@@ -116,6 +143,18 @@ public class Livro extends Composite {
 								}
 							}
 						});
+	}
+
+	@UiHandler("buttonEmprestar")
+	void onButtonEmprestarClick(ClickEvent event) {
+		dialogoEmprestar = new DialogBox(false);
+		dialogoEmprestar.setWidth("450px");
+		dialogoEmprestar.setHeight("113px");
+
+		Emprestar emprestar = new Emprestar(livro, dialogoEmprestar);
+
+		dialogoEmprestar.setWidget(emprestar);
+		dialogoEmprestar.center();
 	}
 
 	@UiHandler("buttonSalvar")

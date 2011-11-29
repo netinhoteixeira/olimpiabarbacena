@@ -18,6 +18,7 @@ import br.org.olimpiabarbacena.client.Principal;
 import br.org.olimpiabarbacena.client.rpc.MidiaService;
 import br.org.olimpiabarbacena.client.rpc.MidiaServiceAsync;
 import br.org.olimpiabarbacena.shared.dados.Audio;
+import br.org.olimpiabarbacena.shared.dados.Midia;
 import br.org.olimpiabarbacena.shared.dados.Tipo;
 
 import com.google.gwt.core.client.GWT;
@@ -32,21 +33,23 @@ import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.Hidden;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 
 /**
  * <p>
- * Este &eacute; o formul&aacute;rio para inser&ccedil;&atilde;o e edi&ccedil;&atilde;o
- * de CD ou DVD.
+ * Este &eacute; o formul&aacute;rio para inser&ccedil;&atilde;o e
+ * edi&ccedil;&atilde;o de CD ou DVD.
  * </p>
  * <p>
- * Esta classe est&aacute; no pacote <code>formulario</code> porque &eacute; onde se
- * encontram todos os formul&aacute;rios do cliente. No cliente, n&oacute;s permitimos
- * o fornecimento de informa&ccedil;&otilde;es para serem enviados por uma
- * requisi&ccedil;&atilde;o RPC. No servidor, n&oacute;s inserimos os dados fornecidos
- * caso n&atilde;o possua uma identifica&ccedil;&atilde;o ou salvamos caso exista uma
+ * Esta classe est&aacute; no pacote <code>formulario</code> porque &eacute;
+ * onde se encontram todos os formul&aacute;rios do cliente. No cliente,
+ * n&oacute;s permitimos o fornecimento de informa&ccedil;&otilde;es para serem
+ * enviados por uma requisi&ccedil;&atilde;o RPC. No servidor, n&oacute;s
+ * inserimos os dados fornecidos caso n&atilde;o possua uma
+ * identifica&ccedil;&atilde;o ou salvamos caso exista uma
  * identifica&ccedil;&atilde;o.
  * </p>
  */
@@ -55,6 +58,8 @@ public class CD extends Composite {
 	private Principal principal;
 	private DialogBox dialogo;
 	private Tipo tipo;
+	private Midia cd;
+	private DialogBox dialogoEmprestar;
 	private static CDUiBinder uiBinder = GWT.create(CDUiBinder.class);
 	@UiField
 	Hidden hiddenId;
@@ -71,13 +76,15 @@ public class CD extends Composite {
 	@UiField
 	CheckBox checkboxAudio;
 	@UiField
+	Label labelIdioma;
+	@UiField
 	ListBox listboxIdioma;
+	@UiField
+	Label labelCategoria;
 	@UiField
 	ListBox listboxCategoria;
 	@UiField
 	public Button buttonEmprestar;
-	@UiField
-	public Button buttonReservar;
 	@UiField
 	Button buttonSalvar;
 	@UiField
@@ -94,6 +101,11 @@ public class CD extends Composite {
 		this.dialogo = dialogo;
 		this.tipo = tipo;
 		initWidget(uiBinder.createAndBindUi(this));
+
+		labelIdioma.setVisible(false);
+		listboxIdioma.setVisible(false);
+		labelCategoria.setVisible(false);
+		listboxCategoria.setVisible(false);
 	}
 
 	public void get(String id) {
@@ -109,6 +121,7 @@ public class CD extends Composite {
 							public void onSuccess(
 									br.org.olimpiabarbacena.shared.dados.Midia midia) {
 								if (midia != null) {
+									cd = midia;
 									hiddenId.setValue(midia.getId());
 									textboxTitulo.setValue(midia.getTitulo());
 									textboxArtista.setValue(midia.getAutor());
@@ -126,6 +139,18 @@ public class CD extends Composite {
 								}
 							}
 						});
+	}
+
+	@UiHandler("buttonEmprestar")
+	void onButtonEmprestarClick(ClickEvent event) {
+		dialogoEmprestar = new DialogBox(false);
+		dialogoEmprestar.setWidth("450px");
+		dialogoEmprestar.setHeight("113px");
+
+		Emprestar emprestar = new Emprestar(cd, dialogoEmprestar);
+
+		dialogoEmprestar.setWidget(emprestar);
+		dialogoEmprestar.center();
 	}
 
 	@UiHandler("buttonSalvar")

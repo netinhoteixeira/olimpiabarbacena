@@ -58,22 +58,19 @@ limitations under the License.
 				<g:CheckBox text="Áudio" ui:field="checkboxAudio"/>
 			</g:at>
 			<g:at left="34" top="181">
-				<g:Label text="Idioma"/>
+				<g:Label text="Idioma" ui:field="labelIdioma"/>
 			</g:at>
 			<g:at left="81" top="178">
 				<g:ListBox width="186px" height="22" ui:field="listboxIdioma"/>
 			</g:at>
 			<g:at left="280" top="181">
-				<g:Label text="Categoria"/>
+				<g:Label text="Categoria" ui:field="labelCategoria"/>
 			</g:at>
 			<g:at left="346" top="178">
 				<g:ListBox width="100px" height="22" ui:field="listboxCategoria"/>
 			</g:at>
 			<g:at left="12" top="216">
 				<g:Button width="100px" height="32px" ui:field="buttonEmprestar">Emprestar</g:Button>
-			</g:at>
-			<g:at left="124" top="216">
-				<g:Button width="100px" height="32px" ui:field="buttonReservar">Reservar</g:Button>
 			</g:at>
 			<g:at left="236" top="216">
 				<g:Button width="100px" height="32px" ui:field="buttonSalvar">Salvar</g:Button>

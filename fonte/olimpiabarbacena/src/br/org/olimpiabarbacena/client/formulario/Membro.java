@@ -40,6 +40,21 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.datepicker.client.DateBox;
 
+/**
+ * <p>
+ * Este &eacute; o formul&aacute;rio para inser&ccedil;&atilde;o e
+ * edi&ccedil;&atilde;o de Membro.
+ * </p>
+ * <p>
+ * Esta classe est&aacute; no pacote <code>formulario</code> porque &eacute;
+ * onde se encontram todos os formul&aacute;rios do cliente. No cliente,
+ * n&oacute;s permitimos o fornecimento de informa&ccedil;&otilde;es para serem
+ * enviados por uma requisi&ccedil;&atilde;o RPC. No servidor, n&oacute;s
+ * inserimos os dados fornecidos caso n&atilde;o possua uma
+ * identifica&ccedil;&atilde;o ou salvamos caso exista uma
+ * identifica&ccedil;&atilde;o.
+ * </p>
+ */
 public class Membro extends Composite {
 
 	private static MembroUiBinder uiBinder = GWT.create(MembroUiBinder.class);
@@ -69,8 +84,6 @@ public class Membro extends Composite {
 	TextBox textboxCEP;
 	@UiField
 	public Button buttonHistorico;
-	@UiField
-	public Button buttonExcluir;
 	@UiField
 	public Button buttonSalvar;
 	@UiField

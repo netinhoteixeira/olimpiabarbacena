@@ -1,0 +1,28 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	</ui:style>
+	<g:HTMLPanel>
+		<g:AbsolutePanel height="91px" width="450px">
+			<g:at left="10" top="16">
+				<g:Label text="Reservado por"/>
+			</g:at>
+			<g:at left="100" top="10">
+				<g:TextBox width="326px" height="18px" ui:field="textboxReservadoPor"/>
+			</g:at>
+			<g:at left="328" top="46">
+				<g:Button ui:field="buttonOK">OK</g:Button>
+			</g:at>
+			<g:at left="369" top="46">
+				<g:Button ui:field="buttonCancelar">Cancelar</g:Button>
+			</g:at>
+			<g:at left="10" top="58">
+				<g:Label text="Última reserva" ui:field="labelUltimaReserva"/>
+			</g:at>
+			<g:at left="101" top="58">
+				<g:DateLabel ui:field="labelReserva"/>
+			</g:at>
+		</g:AbsolutePanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

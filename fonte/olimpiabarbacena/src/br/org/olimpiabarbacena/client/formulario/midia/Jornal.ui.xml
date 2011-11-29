@@ -73,13 +73,13 @@ limitations under the License.
 				<g:TextArea width="355px" height="32px" ui:field="textareaDescricao"/>
 			</g:at>
 			<g:at left="34" top="277">
-				<g:Label text="Idioma"/>
+				<g:Label text="Idioma" ui:field="labelIdioma"/>
 			</g:at>
 			<g:at left="81" top="274">
 				<g:ListBox width="186px" height="22" ui:field="listboxIdioma"/>
 			</g:at>
 			<g:at left="280" top="277">
-				<g:Label text="Categoria"/>
+				<g:Label text="Categoria" ui:field="labelCategoria"/>
 			</g:at>
 			<g:at left="346" top="274">
 				<g:ListBox width="100px" height="22" ui:field="listboxCategoria"/>

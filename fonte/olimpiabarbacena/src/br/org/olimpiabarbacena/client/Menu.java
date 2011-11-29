@@ -28,13 +28,15 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class Menu extends Composite {
 
+	private Principal principal;
+	private Pesquisa selecionado;
 	private static MenuUiBinder uiBinder = GWT.create(MenuUiBinder.class);
 	@UiField
 	Hyperlink linkAcervo;
 	@UiField
 	Hyperlink linkMembro;
-	private Pesquisa selecionado;
-	private Principal principal;
+	@UiField
+	Hyperlink linkEmprestimo;
 
 	interface MenuUiBinder extends UiBinder<Widget, Menu> {
 	}
@@ -72,5 +74,12 @@ public class Menu extends Composite {
 		this.selecionado = Pesquisa.MEMBRO;
 		this.principal.getPesquisar().textboxPesquisar.setText(new String());
 		this.principal.getPesquisar().listarMembro();
+	}
+
+	@UiHandler("linkEmprestimo")
+	void onLinkEmprestimoClick(ClickEvent event) {
+		this.selecionado = Pesquisa.EMPRESTIMO;
+		this.principal.getPesquisar().textboxPesquisar.setText(new String());
+		this.principal.getPesquisar().listarEmprestimo();
 	}
 }
