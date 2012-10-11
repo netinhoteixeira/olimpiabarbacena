@@ -48,6 +48,7 @@ public class Emprestimo implements IsSerializable {
 	@Persistent
 	private Integer diasentrega;
 	
+	@Persistent
 	private Date previsao;
 
 	@Persistent
@@ -123,6 +124,14 @@ public class Emprestimo implements IsSerializable {
 
 	public Integer getDiasEntrega() {
 		return this.diasentrega;
+	}
+	
+	public void setPrevisao(Date previsao) {
+		this.previsao = previsao;
+	}
+
+	public Date getPrevisao() {
+		return this.previsao;
 	}
 
 	public void setEntrega(Date entrega) {
