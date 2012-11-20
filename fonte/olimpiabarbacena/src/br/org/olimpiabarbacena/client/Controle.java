@@ -22,14 +22,18 @@ import br.org.olimpiabarbacena.shared.dados.Tipo;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.Label;
 
 public class Controle extends Composite {
 
@@ -134,6 +138,57 @@ public class Controle extends Composite {
 			jornal.buttonFechar.setText("Cancelar");
 
 			dialogo.setWidget(jornal);
+			dialogo.center();
+		} else {
+			// Cria o diálogo
+			dialogo = new DialogBox(false);
+
+			// Cria uma âncora para aceitar os eventos de clique
+			final Anchor dialogoAvisoFechar = new Anchor("X");
+
+			// Adiciona um "handler" para âncora
+			dialogoAvisoFechar.addClickHandler(new ClickHandler() {
+				@Override
+				public void onClick(ClickEvent event) {
+					dialogo.hide();
+				}
+			});
+
+			// Create dialog
+			dialogo.setHTML("Aviso&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+
+			// Get caption element
+			final HTML caption = ((HTML) dialogo.getCaption());
+
+			// Add anchor to caption
+			caption.getElement().appendChild(dialogoAvisoFechar.getElement());
+
+			// Add click handler to caption
+			caption.addClickHandler(new ClickHandler() {
+
+				@Override
+				public void onClick(ClickEvent event) {
+					// Get x,y caption click relative to the anchor
+					final int x = event.getRelativeX(dialogoAvisoFechar
+							.getElement());
+					final int y = event.getRelativeY(dialogoAvisoFechar
+							.getElement());
+
+					// Check click was within bounds of anchor
+					if (x >= 0 && y >= 0
+							&& x <= dialogoAvisoFechar.getOffsetWidth()
+							&& y <= dialogoAvisoFechar.getOffsetHeight()) {
+						// Raise event on anchor
+						dialogoAvisoFechar.fireEvent(event);
+					}
+				}
+			});
+
+			final Label labelAviso = new Label("Selecione um tipo de mídia.");
+			dialogo.setWidget(labelAviso);
+
+			// Show the dialog
+			dialogo.show();
 			dialogo.center();
 		}
 	}
